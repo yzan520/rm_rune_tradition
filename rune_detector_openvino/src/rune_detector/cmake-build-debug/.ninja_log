@@ -1,0 +1,7 @@
+# ninja log v5
+17	22	1703249246675338623	librune_detector.a	cc20618388a61abe
+0	3	0	/home/zps/rm_power_rune/rune_detector_openvino/src/rune_detector/cmake-build-debug/CMakeFiles/cmake.verify_globs	643263d6be8641ad
+0	17	1703249246663331574	CMakeFiles/rune_detector.dir/src/inference.o	2347f9186846490b
+0	17	1703249246663331574	CMakeFiles/rune_detector.dir/src/parser.o	791b64fed0ae380f
+0	17	1703249246663331574	CMakeFiles/rune_detector.dir/src/detector.o	68db91261037e4d8
+0	3	0	/home/zps/rm_power_rune/rune_detector_openvino/src/rune_detector/cmake-build-debug/CMakeFiles/cmake.verify_globs	643263d6be8641ad

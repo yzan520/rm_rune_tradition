@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsolver.a 
+/usr/bin/ranlib libsolver.a

@@ -1,0 +1,138 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3
+					],
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.25"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "src/rune_detector",
+					"jsonFile" : "directory-src.rune_detector-Debug-2e8a1231e2297fee6881.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.25"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src/rune_detector",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "src/solver",
+					"jsonFile" : "directory-src.solver-Debug-e720e70d4252db59eabd.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.25"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src/solver",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "src/rune_auto_aim",
+					"jsonFile" : "directory-src.rune_auto_aim-Debug-e0fae4725116b6693ebf.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.25"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src/rune_auto_aim",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					],
+					"name" : "rune_detector_openvino",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 3,
+					"id" : "rune_auto_aim::@e4eee3907bfc188f5dfc",
+					"jsonFile" : "target-rune_auto_aim-Debug-5543d8fa5e82b0e2787c.json",
+					"name" : "rune_auto_aim",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "rune_detector::@224950fb6138f84758b2",
+					"jsonFile" : "target-rune_detector-Debug-a7b6e265229f217cb2a0.json",
+					"name" : "rune_detector",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rune_detector_openvino::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rune_detector_openvino-Debug-52c6a0564431bada0d74.json",
+					"name" : "rune_detector_openvino",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "solver::@56b03cb272704949ecff",
+					"jsonFile" : "target-solver-Debug-31e481371b41ab4454dd.json",
+					"name" : "solver",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/zps/rm_power_rune/rune_detector_openvino/cmake-build-debug",
+		"source" : "/home/zps/rm_power_rune/rune_detector_openvino"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

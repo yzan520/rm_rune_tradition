@@ -1,0 +1,10 @@
+# ninja log v5
+1	11	1703255815332067307	src/rune_detector/CMakeFiles/rune_detector.dir/src/detector.cpp.o	f121225ab6ef46e6
+0	222	1703255815540062772	CMakeFiles/rune_detector_openvino.dir/src/main.cpp.o	f5406b59dbe426b3
+0	16	1703255846827382444	src/rune_auto_aim/CMakeFiles/rune_auto_aim.dir/src/rune_auto_aim.cpp.o	70090e7b6570f036
+9	14	1703249298860708623	src/rune_detector/librune_detector.a	789f16728da6c5ab
+0	117	1703299324483806688	build.ninja	6fcd581bd1421d5b
+0	3	0	/home/zps/rm_power_rune/rune_detector_openvino/cmake-build-debug/CMakeFiles/cmake.verify_globs	3aed6d70e457e7a9
+1	8	1703255815328067395	src/solver/libsolver.a	da735b43c4b671fc
+0	9	1703249298856707024	src/rune_detector/CMakeFiles/rune_detector.dir/src/parser.cpp.o	4a75719d41c40a1c
+1	12	1703255815332067307	src/rune_detector/CMakeFiles/rune_detector.dir/src/inference.cpp.o	ddae97a59e55b1bb

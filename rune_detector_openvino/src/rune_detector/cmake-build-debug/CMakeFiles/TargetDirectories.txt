@@ -1,0 +1,3 @@
+/home/zps/rm_power_rune/rune_detector_openvino/src/rune_detector/cmake-build-debug/CMakeFiles/rune_detector.dir
+/home/zps/rm_power_rune/rune_detector_openvino/src/rune_detector/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/zps/rm_power_rune/rune_detector_openvino/src/rune_detector/cmake-build-debug/CMakeFiles/rebuild_cache.dir
