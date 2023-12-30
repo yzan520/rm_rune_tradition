@@ -1,0 +1,6 @@
+/home/zps/rm_power_rune/rune_detector_tradition/cmake-build-debug/CMakeFiles/rm_rune_detection.dir
+/home/zps/rm_power_rune/rune_detector_tradition/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/zps/rm_power_rune/rune_detector_tradition/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/zps/rm_power_rune/rune_detector_tradition/cmake-build-debug/src/detector_rune/CMakeFiles/rune_detector.dir
+/home/zps/rm_power_rune/rune_detector_tradition/cmake-build-debug/src/detector_rune/CMakeFiles/edit_cache.dir
+/home/zps/rm_power_rune/rune_detector_tradition/cmake-build-debug/src/detector_rune/CMakeFiles/rebuild_cache.dir
