@@ -1,0 +1,2 @@
+/usr/bin/ar qc libhik_ui.a 
+/usr/bin/ranlib libhik_ui.a

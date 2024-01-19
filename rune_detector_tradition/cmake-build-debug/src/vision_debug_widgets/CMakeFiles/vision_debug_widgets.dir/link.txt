@@ -1,0 +1,2 @@
+/usr/bin/ar qc libvision_debug_widgets.a CMakeFiles/vision_debug_widgets.dir/vision_debug_widgets_autogen/mocs_compilation.cpp.o
+/usr/bin/ranlib libvision_debug_widgets.a

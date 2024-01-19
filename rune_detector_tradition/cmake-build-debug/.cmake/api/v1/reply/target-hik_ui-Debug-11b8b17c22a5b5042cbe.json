@@ -1,0 +1,78 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "src/HikDriver/libhik_ui.a"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_link_libraries"
+		],
+		"files" : 
+		[
+			"src/HikDriver/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 26,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 31,
+				"parent" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "hik_driver::@947b69f0db3b788ea8e9"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "vision_debug_widgets::@6813d5554cfedd1580e1"
+		}
+	],
+	"id" : "hik_ui::@947b69f0db3b788ea8e9",
+	"name" : "hik_ui",
+	"nameOnDisk" : "libhik_ui.a",
+	"paths" : 
+	{
+		"build" : "src/HikDriver",
+		"source" : "src/HikDriver"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"path" : "src/HikDriver/include/HikDriver/HikUi.h",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

@@ -1,0 +1,6 @@
+Log file created at: 2024/01/19 14:50:09
+Running on machine: zps-Dell-G15-5511
+Running duration (h:mm:ss): 0:00:00
+Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu threadid file:line] msg
+(HikDriver.cpp:160)[WARNING][2024-00-19 14:50:09] No hik camera devices
+(buff_auto_aim.cpp:50)[FATAL][2024-00-19 14:50:09] Hik can't connected!

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libbuff_auto_aim.a CMakeFiles/buff_auto_aim.dir/buff_auto_aim_autogen/mocs_compilation.cpp.o CMakeFiles/buff_auto_aim.dir/src/buff_auto_aim.cpp.o
+/usr/bin/ranlib libbuff_auto_aim.a

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libgoogle_logger.a CMakeFiles/google_logger.dir/src/google_logger.cpp.o
+/usr/bin/ranlib libgoogle_logger.a

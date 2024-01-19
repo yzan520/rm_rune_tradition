@@ -1,0 +1,5 @@
+Log file created at: 2024/01/06 09:41:24
+Running on machine: zps-Dell-G15-5511
+Running duration (h:mm:ss): 0:00:02
+Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu threadid file:line] msg
+(HikDriver.cpp:507)[ERROR][2024-00-06 09:41:24] setExposureTime() error code: [0x80000102] => 

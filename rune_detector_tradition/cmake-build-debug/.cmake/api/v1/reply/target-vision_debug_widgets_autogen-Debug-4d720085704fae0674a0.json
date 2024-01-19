@@ -1,0 +1,71 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"src/vision_debug_widgets/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"id" : "vision_debug_widgets_autogen_timestamp_deps::@6813d5554cfedd1580e1"
+		}
+	],
+	"id" : "vision_debug_widgets_autogen::@6813d5554cfedd1580e1",
+	"isGeneratorProvided" : true,
+	"name" : "vision_debug_widgets_autogen",
+	"paths" : 
+	{
+		"build" : "src/vision_debug_widgets",
+		"source" : "src/vision_debug_widgets"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1,
+				2
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/src/vision_debug_widgets/CMakeFiles/vision_debug_widgets_autogen",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/src/vision_debug_widgets/CMakeFiles/vision_debug_widgets_autogen.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/src/vision_debug_widgets/vision_debug_widgets_autogen/timestamp.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

@@ -1,0 +1,7 @@
+Log file created at: 2024/01/19 08:54:16
+Running on machine: zps-Dell-G15-5511
+Running duration (h:mm:ss): 0:00:00
+Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu threadid file:line] msg
+(HikDriver.cpp:162)[INFO][2024-00-19 08:54:16] Number of available devices: 1
+(HikDriver.cpp:507)[ERROR][2024-00-19 08:54:16] MV_CC_OpenDevice error code: [0x80000203] => 
+(buff_auto_aim.cpp:45)[FATAL][2024-00-19 08:54:16] Hik can't connected!

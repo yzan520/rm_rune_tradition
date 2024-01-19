@@ -1,0 +1,7 @@
+Log file created at: 2024/01/18 19:11:10
+Running on machine: zps-Dell-G15-5511
+Running duration (h:mm:ss): 0:00:01
+Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu threadid file:line] msg
+(HikDriver.cpp:507)[ERROR][2024-00-18 19:11:10] setExposureTime() error code: [0x80000102] => 
+(HikDriver.cpp:507)[ERROR][2024-00-18 19:12:14] triggerImageData() error code: [0x80000301] => 
+(HikDriver.cpp:507)[ERROR][2024-00-18 19:12:15] readImageData() error code: [0x80000007] => 无数据

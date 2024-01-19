@@ -1,0 +1,5 @@
+Log file created at: 2024/01/19 14:16:47
+Running on machine: zps-Dell-G15-5511
+Running duration (h:mm:ss): 0:00:00
+Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu threadid file:line] msg
+(HikDriver.cpp:162)[INFO][2024-00-19 14:16:47] Number of available devices: 1

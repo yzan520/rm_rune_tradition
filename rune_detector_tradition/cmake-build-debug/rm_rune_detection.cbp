@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="rm_rune_detection"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\src\;CMake Files\src\detector_rune\;CMake Files\src\HikDriver\;CMake Files\src\google_logger\;CMake Files\src\vision_debug_widgets\;CMake Files\src\buff_auto_aim\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\opencv4\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\glog\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\gflags\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\fmt\;CMake Files\..\..\..\..\..\usr\local\Qt\;CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\;CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\;CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\;CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\;CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5\;CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Core\;CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Widgets\;CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Gui\;CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5SerialPort\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rm_rune_detection">
+				<Option output="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/rm_rune_detection" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add option="-DQT_SERIALPORT_LIB"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/vision_debug_widgets/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/buff_auto_aim/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/detector_rune/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/google_logger/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/HikDriver/include"/>
+					<Add directory="/opt/MVS/include"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtCore"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/./mkspecs/linux-g++"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtWidgets"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtGui"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/local/include/opencv4"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtSerialPort"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/Makefile&quot;  VERBOSE=1 rm_rune_detection"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rm_rune_detection/fast">
+				<Option output="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/rm_rune_detection" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add option="-DQT_SERIALPORT_LIB"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/vision_debug_widgets/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/buff_auto_aim/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/detector_rune/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/google_logger/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/HikDriver/include"/>
+					<Add directory="/opt/MVS/include"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtCore"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/./mkspecs/linux-g++"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtWidgets"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtGui"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/local/include/opencv4"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtSerialPort"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/Makefile&quot;  VERBOSE=1 rm_rune_detection/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rune_detector">
+				<Option output="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/detector_rune/librune_detector.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/detector_rune"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/detector_rune/include"/>
+					<Add directory="/usr/local/include/opencv4"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/detector_rune/Makefile&quot;  VERBOSE=1 rune_detector"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/detector_rune/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/detector_rune/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/detector_rune/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rune_detector/fast">
+				<Option output="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/detector_rune/librune_detector.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/detector_rune"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/detector_rune/include"/>
+					<Add directory="/usr/local/include/opencv4"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/detector_rune/Makefile&quot;  VERBOSE=1 rune_detector/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/detector_rune/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/detector_rune/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/detector_rune/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="hik_driver">
+				<Option output="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/HikDriver/libhik_driver.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/HikDriver"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/HikDriver/include"/>
+					<Add directory="/opt/MVS/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv4"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/HikDriver/Makefile&quot;  VERBOSE=1 hik_driver"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/HikDriver/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/HikDriver/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/HikDriver/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="hik_driver/fast">
+				<Option output="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/HikDriver/libhik_driver.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/HikDriver"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/HikDriver/include"/>
+					<Add directory="/opt/MVS/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv4"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/HikDriver/Makefile&quot;  VERBOSE=1 hik_driver/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/HikDriver/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/HikDriver/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/HikDriver/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="hik_ui">
+				<Option output="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/HikDriver/libhik_ui.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/HikDriver"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/HikDriver/include"/>
+					<Add directory="/opt/MVS/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/vision_debug_widgets/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv4"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtCore"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/./mkspecs/linux-g++"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtWidgets"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtGui"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/HikDriver/Makefile&quot;  VERBOSE=1 hik_ui"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/HikDriver/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/HikDriver/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/HikDriver/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="hik_ui/fast">
+				<Option output="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/HikDriver/libhik_ui.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/HikDriver"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/HikDriver/include"/>
+					<Add directory="/opt/MVS/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/vision_debug_widgets/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv4"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtCore"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/./mkspecs/linux-g++"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtWidgets"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtGui"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/HikDriver/Makefile&quot;  VERBOSE=1 hik_ui/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/HikDriver/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/HikDriver/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/HikDriver/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="google_logger">
+				<Option output="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/google_logger/libgoogle_logger.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/google_logger"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/google_logger/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/google_logger/Makefile&quot;  VERBOSE=1 google_logger"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/google_logger/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/google_logger/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/google_logger/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="google_logger/fast">
+				<Option output="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/google_logger/libgoogle_logger.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/google_logger"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/google_logger/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/google_logger/Makefile&quot;  VERBOSE=1 google_logger/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/google_logger/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/google_logger/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/google_logger/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="vision_debug_widgets">
+				<Option output="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/vision_debug_widgets/libvision_debug_widgets.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/vision_debug_widgets"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/vision_debug_widgets/vision_debug_widgets_autogen/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/vision_debug_widgets/include"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtCore"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/./mkspecs/linux-g++"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtWidgets"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtGui"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/vision_debug_widgets/Makefile&quot;  VERBOSE=1 vision_debug_widgets"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/vision_debug_widgets/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/vision_debug_widgets/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/vision_debug_widgets/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="vision_debug_widgets/fast">
+				<Option output="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/vision_debug_widgets/libvision_debug_widgets.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/vision_debug_widgets"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/vision_debug_widgets/vision_debug_widgets_autogen/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/vision_debug_widgets/include"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtCore"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/./mkspecs/linux-g++"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtWidgets"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtGui"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/vision_debug_widgets/Makefile&quot;  VERBOSE=1 vision_debug_widgets/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/vision_debug_widgets/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/vision_debug_widgets/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/vision_debug_widgets/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="vision_debug_widgets_autogen">
+				<Option working_dir="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/vision_debug_widgets"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/vision_debug_widgets/Makefile&quot;  VERBOSE=1 vision_debug_widgets_autogen"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/vision_debug_widgets/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/vision_debug_widgets/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/vision_debug_widgets/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="buff_auto_aim">
+				<Option output="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/buff_auto_aim/libbuff_auto_aim.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/buff_auto_aim"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_SERIALPORT_LIB"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/buff_auto_aim/buff_auto_aim_autogen/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/buff_auto_aim/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/detector_rune/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/google_logger/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/HikDriver/include"/>
+					<Add directory="/opt/MVS/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/vision_debug_widgets/include"/>
+					<Add directory="/usr/local/include/opencv4"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtCore"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/./mkspecs/linux-g++"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtWidgets"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtGui"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtSerialPort"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/buff_auto_aim/Makefile&quot;  VERBOSE=1 buff_auto_aim"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/buff_auto_aim/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/buff_auto_aim/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/buff_auto_aim/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="buff_auto_aim/fast">
+				<Option output="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/buff_auto_aim/libbuff_auto_aim.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/buff_auto_aim"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_SERIALPORT_LIB"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/buff_auto_aim/buff_auto_aim_autogen/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/buff_auto_aim/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/detector_rune/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/google_logger/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/HikDriver/include"/>
+					<Add directory="/opt/MVS/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/vision_debug_widgets/include"/>
+					<Add directory="/usr/local/include/opencv4"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtCore"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/./mkspecs/linux-g++"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtWidgets"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtGui"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtSerialPort"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/buff_auto_aim/Makefile&quot;  VERBOSE=1 buff_auto_aim/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/buff_auto_aim/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/buff_auto_aim/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/buff_auto_aim/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="buff_auto_aim_autogen">
+				<Option working_dir="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/buff_auto_aim"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/buff_auto_aim/Makefile&quot;  VERBOSE=1 buff_auto_aim_autogen"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/buff_auto_aim/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/buff_auto_aim/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/buff_auto_aim/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/buff_auto_aim/buff_auto_aim_autogen/mocs_compilation.cpp">
+			<Option target="buff_auto_aim"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/vision_debug_widgets/vision_debug_widgets_autogen/mocs_compilation.cpp">
+			<Option target="vision_debug_widgets"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/HikDriver/include/HikDriver/HikDriver.h">
+			<Option target="hik_driver"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/HikDriver/include/HikDriver/HikUi.h">
+			<Option target="hik_ui"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/HikDriver/src/HikDriver.cpp">
+			<Option target="hik_driver"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/buff_auto_aim/include/buff_auto_aim/buff_auto_aim.h">
+			<Option target="buff_auto_aim"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/buff_auto_aim/src/buff_auto_aim.cpp">
+			<Option target="buff_auto_aim"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/detector_rune/include/detector_rune/detector_rune.h">
+			<Option target="rune_detector"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/detector_rune/src/detector_rune.cpp">
+			<Option target="rune_detector"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/google_logger/include/google_logger/google_logger.h">
+			<Option target="google_logger"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/google_logger/src/google_logger.cpp">
+			<Option target="google_logger"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/main.cpp">
+			<Option target="rm_rune_detection"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/vision_debug_widgets/include/vision_debug_widgets/hsv_edit.h">
+			<Option target="vision_debug_widgets"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/vision_debug_widgets/include/vision_debug_widgets/slider.h">
+			<Option target="vision_debug_widgets"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/vision_debug_widgets/include/vision_debug_widgets/slider_widget.h">
+			<Option target="vision_debug_widgets"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/detector_rune/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\detector_rune\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/HikDriver/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\HikDriver\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/google_logger/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\google_logger\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/vision_debug_widgets/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\vision_debug_widgets\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/buff_auto_aim/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\buff_auto_aim\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/lib/cmake/opencv4/OpenCVConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/lib/cmake/opencv4/OpenCVConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/lib/cmake/opencv4/OpenCVModules-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/lib/cmake/opencv4/OpenCVModules.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/lib/cmake/glog/glog-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\glog\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/lib/cmake/glog/glog-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\glog\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/lib/cmake/glog/glog-modules.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\glog\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/lib/cmake/glog/glog-targets-noconfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\glog\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/lib/cmake/glog/glog-targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\glog\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/lib/cmake/gflags/gflags-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\gflags\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/lib/cmake/gflags/gflags-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\gflags\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/lib/cmake/gflags/gflags-nonamespace-targets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\gflags\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/lib/cmake/gflags/gflags-nonamespace-targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\gflags\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/lib/cmake/fmt/fmt-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\fmt\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/lib/cmake/fmt/fmt-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\fmt\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/lib/cmake/fmt/fmt-targets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\fmt\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/lib/cmake/fmt/fmt-targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\fmt\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5/Qt5Config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5/Qt5ConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5/Qt5ModuleLocation.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Core/Qt5CoreConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Core/Qt5CoreMacros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QComposePlatformInputContextPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QEglFSEmulatorIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QEglFSIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QEglFSKmsEglDeviceIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QEglFSX11IntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QEvdevKeyboardPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QEvdevMousePlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QEvdevTabletPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QEvdevTouchScreenPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QGtk3ThemePlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QICNSPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QIbusPlatformInputContextPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QLinuxFbIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QMinimalEglIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QSvgIconPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QSvgPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QTgaPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QTiffPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QVirtualKeyboardPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QVncIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QWaylandEglPlatformIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QWaylandIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QWaylandXCompositeEglPlatformIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QWaylandXCompositeGlxPlatformIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QWbmpPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QWebGLIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QWebpPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QXcbEglIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QXcbGlxIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QXcbIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QXdgDesktopPortalThemePlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5SerialPort/Qt5SerialPortConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5SerialPort\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5SerialPort/Qt5SerialPortConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5SerialPort\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

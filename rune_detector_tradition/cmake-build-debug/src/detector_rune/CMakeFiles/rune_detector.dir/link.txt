@@ -1,0 +1,2 @@
+/usr/bin/ar qc librune_detector.a CMakeFiles/rune_detector.dir/src/detector_rune.cpp.o
+/usr/bin/ranlib librune_detector.a

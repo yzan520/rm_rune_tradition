@@ -1,0 +1,2 @@
+/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/vision_debug_widgets/vision_debug_widgets_autogen/IVCEUEJDXG/moc_hsv_edit.cpp: /home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/vision_debug_widgets/include/vision_debug_widgets/hsv_edit.h \
+  /home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/vision_debug_widgets/vision_debug_widgets_autogen/moc_predefs.h

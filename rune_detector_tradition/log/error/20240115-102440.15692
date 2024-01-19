@@ -1,0 +1,5 @@
+Log file created at: 2024/01/15 10:24:40
+Running on machine: zps-Dell-G15-5511
+Running duration (h:mm:ss): 0:00:00
+Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu threadid file:line] msg
+(buff_auto_aim.cpp:43)[FATAL][2024-00-15 10:24:40] Hik can't connected!
