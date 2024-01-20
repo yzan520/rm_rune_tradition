@@ -10,7 +10,7 @@
 #include <fmt/color.h>
 
 void Detector::find_R(const cv::Mat& frame_src) {
-    cv::Mat test_R; // 用于寻找R标中心点的测试图像
+    cv::Mat test_R; // 用于显示R标中心点的测试图像
     frame_src.copyTo(test_R);
 
     // Split the src into three channels
@@ -122,7 +122,7 @@ void Detector::find_Leaf(const cv::Mat &frame_src) {
                             cv::Scalar(0, 255, 0), 2); // 满足所有的限制条件的轮廓--绿色--target
 
                     // ----------------------------------Step3 获取roi-------------------------------------------------
-                    cv::Mat test_roi; // 用来测试roi图像
+                    cv::Mat test_roi; // 用来显示roi的测试图像
                     frame_src.copyTo(test_roi);
                     cv::Point2f vertices_roi[4];
                     leaf_rect.points(vertices_roi);
@@ -223,10 +223,21 @@ void Detector::find_Leaf(const cv::Mat &frame_src) {
     cv::imshow("test_leaf", test_leaf);
 }
 
+void Detector::drawRotatedRect(cv::Mat &img, const cv::RotatedRect &rect, const cv::Scalar &color, int thickness) {
+    cv::Point2f Vertex[4];
+    rect.points(Vertex);
+    for(int i = 0 ; i < 4 ; i++) {
+        cv::line(img , Vertex[i] , Vertex[(i + 1) % 4] , color , thickness);
+    }
+}
+
+float Detector::distance(cv::Point a,cv::Point b) {
+    return sqrt((a.x -b.x)*(a.x -b.x) + (a.y -b.y)*(a.y -b.y));
+}
 
 // 已弃用
 /* void Detector::find_Arm(const cv::Mat& frame_src) {
-    cv::Mat test_arm; // 用于寻找扇叶的测试图像
+    cv::Mat test_arm; // 用于显示扇叶的测试图像
     frame_src.copyTo(test_arm);
 
     std::vector<cv::Mat> channels;
@@ -283,11 +294,10 @@ void Detector::find_Leaf(const cv::Mat &frame_src) {
         }
     }
     cv::imshow("video_arm", test_arm);
-} */
+}
 
-
-/* cv::Mat Detector::find_Target(const cv::Mat &frame) {
-    cv::Mat result; // 用于寻找击打点的测试图像
+cv::Mat Detector::find_Target(const cv::Mat &frame) {
+    cv::Mat result; // 用于显示击打点的测试图像
     frame.copyTo(result);
     cv::Point2f target; // 目标点
     double multiple = 1.5; // 倍率，换算目标点所用
@@ -340,14 +350,4 @@ void Detector::find_Leaf(const cv::Mat &frame_src) {
     return result;
 } */
 
-void Detector::drawRotatedRect(cv::Mat &img, const cv::RotatedRect &rect, const cv::Scalar &color, int thickness) {
-    cv::Point2f Vertex[4];
-    rect.points(Vertex);
-    for(int i = 0 ; i < 4 ; i++) {
-        cv::line(img , Vertex[i] , Vertex[(i + 1) % 4] , color , thickness);
-    }
-}
 
-float Detector::distance(cv::Point a,cv::Point b) {
-    return sqrt((a.x -b.x)*(a.x -b.x) + (a.y -b.y)*(a.y -b.y));
-}

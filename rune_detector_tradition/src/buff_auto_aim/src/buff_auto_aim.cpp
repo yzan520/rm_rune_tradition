@@ -26,7 +26,7 @@ namespace buff_auto_aim {
             cv::cvtColor(m_frame, m_frame, cv::COLOR_BGR2RGB);
             cv::imshow("src", m_frame);
             Detector rune;
-//            rune.find_R(m_frame);
+            rune.find_R(m_frame);
 //            rune.find_Arm(m_frame);
             rune.find_Leaf(m_frame);
 //            rune.find_Target(m_frame);

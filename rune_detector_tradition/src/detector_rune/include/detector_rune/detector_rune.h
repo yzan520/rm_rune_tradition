@@ -5,42 +5,60 @@
 #ifndef RM_RUNE_DETECTION_DETECTOR_RUNE_H
 #define RM_RUNE_DETECTION_DETECTOR_RUNE_H
 
-
 #include <opencv2/opencv.hpp>
 
 class Detector {
 public:
 
+    /**
+     * @brief 找R标
+     * @param frame_src [in]
+     */
     void find_R(const cv::Mat & frame_src);
 
-    // 已弃用
-    void find_Arm(const cv::Mat & frame_src);
-
+    /**
+     * @brief 找扇叶
+     * @param frame_src [in]
+     */
     void find_Leaf(const cv::Mat & frame_src);
 
-    cv::Mat find_Target(const cv::Mat & frame);
+    void find_Arm(const cv::Mat & frame_src); // 已弃用 -- 寻找小臂
 
+    cv::Mat find_Target(const cv::Mat & frame); // 已弃用--寻找击打点与上函数配套使用
+
+
+    /**
+     * @brief 画出旋转矩形，注意：要画的旋转矩形必须是从传入的图像中找到的，不能画roi的旋转矩形，即使该roi图像中也包含要画的旋转矩形
+     * @param img [in]
+     * @param rect [in]
+     * @param color [in]
+     * @param thickness [in]
+     */
     void drawRotatedRect(cv::Mat & img, const cv::RotatedRect & rect, const cv::Scalar & color, int thickness);
 
-    void drawRotatedRect(cv::Mat & img, const cv::RotatedRect & roi, const cv::RotatedRect & rect,  cv::Scalar & color, int thickness);
-
+    /**
+     * @brief 测两点间的距离
+     * @param a 第一个点
+     * @param b 第二个点
+     * @return 两点间距离
+     */
     float distance(cv::Point a, cv::Point b);
 
 private:
 #ifdef DEBUG
     // FIXME R标相关变量 -- 视频
+    int R_thresholdValue = 200; // R标二值化阈值
     double max_R_area = 300; // R标最大面积
     double min_R_area = 200 ; // R标最小面积
     float min_R_ratio = 0.5;
     float max_R_ratio = 1.6;
-    int R_thresholdValue = 200; // R标二值化阈值
     cv::Mat frame_R_binary; // R标二值化图像
     cv::Point2f center; // R外接圆中心坐标
     float radius; // R外接圆半径
 #else
     // FIXME R标相关变量 -- 投影
-    double max_R_area = 200; // R标最大面积
     int R_thresholdValue = 90; // R标二值化阈值
+    double max_R_area = 200; // R标最大面积
     double min_R_area = 70; // R标最小面积
     float min_R_ratio = 0.5;
     float max_R_ratio = 1.6;
