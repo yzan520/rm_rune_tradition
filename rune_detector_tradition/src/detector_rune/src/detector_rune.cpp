@@ -24,7 +24,7 @@ void Detector::find_R(const cv::Mat& frame_src) {
     cv::Mat frame_blue;
     // 获取蓝色通道图像(灰度图),数值为BGR->RGB前的红色通道的数值
     channels[0].copyTo(frame_blue);
-//    cv::imshow("blue", frame_blue);
+    cv::imshow("blue", frame_blue);
 
     // Threshold the image 二值化
     cv::threshold(frame_blue, frame_R_binary, R_thresholdValue, 255, cv::THRESH_BINARY);
@@ -32,7 +32,7 @@ void Detector::find_R(const cv::Mat& frame_src) {
     // Close morphological operation 闭运算->填充小型空洞
     cv::Mat kernel = cv::getStructuringElement(cv::MORPH_RECT, cv::Size(5, 5));
     cv::morphologyEx(frame_R_binary, frame_R_binary, cv::MORPH_CLOSE, kernel);
-//    cv::imshow("binary_R", frame_R_binary);
+    cv::imshow("binary_R", frame_R_binary);
 
 
     // Find and Draw all contours
@@ -79,19 +79,19 @@ void Detector::find_Leaf(const cv::Mat &frame_src) {
     cv::Mat frame_red; // 寻找关键点
     channels[0].copyTo(frame_blue);
     channels[2].copyTo(frame_red);
-//    cv::imshow("blue", frame_blue);
+    cv::imshow("blue", frame_blue);
 //    cv::imshow("red", frame_red);
 
     //----------------------------------------------Step2.寻找臂---------------------------------------------------------
     // 二值化
     cv::Mat frame_leaf_binary;
-    cv::threshold(frame_blue, frame_leaf_binary, leaf_blue_thresholdValue, 255, cv::THRESH_BINARY);
+    cv::threshold(frame_blue, frame_leaf_binary,    leaf_blue_thresholdValue, 255, cv::THRESH_BINARY);
 
     cv::Mat kernel = cv::getStructuringElement(cv::MORPH_RECT, cv::Size(5, 5));
     cv::Mat kernel1 = cv::getStructuringElement(cv::MORPH_RECT, cv::Size(7, 7));
     // 闭运算，关闭小空洞或小裂缝
     cv::morphologyEx(frame_leaf_binary, frame_leaf_binary, cv::MORPH_CLOSE, kernel1);
-    cv::imshow("binary_leaf_blue", frame_leaf_binary);
+//    cv::imshow("binary_leaf_blue", frame_leaf_binary);
 
     // Find and Draw all contours
     std::vector<std::vector<cv::Point> > leaf_contours;
@@ -106,13 +106,13 @@ void Detector::find_Leaf(const cv::Mat &frame_src) {
         leaf_rect = cv::minAreaRect(contour);
 //        cv::putText(test_leaf, std::to_string(rect.size.area()), rect.center, cv::FONT_HERSHEY_SIMPLEX, 0.5,
 //                    cv::Scalar(185, 11, 219), 2); // 显示出所有轮廓的面积--紫色
-        if (leaf_rect.size.area() > 10000) {
+        if (leaf_rect.size.area() > leaf_minsize) {
             float leaf_ratio = leaf_rect.size.width > leaf_rect.size.height ? leaf_rect.size.width / leaf_rect.size.height
                             : leaf_rect.size.height / leaf_rect.size.width;
             std::cout << leaf_ratio << std::endl;
             cv::putText(test_leaf, std::to_string(leaf_rect.size.area()), leaf_rect.center, cv::FONT_HERSHEY_SIMPLEX, 0.5,
                         cv::Scalar(5, 240, 240), 2); // 满足最大面积的限制条件的轮廓--黄色
-            if (leaf_min_ratio < leaf_ratio && leaf_ratio < leaf_max_ratio && leaf_rect.size.area() < 17000) {
+            if (leaf_min_ratio < leaf_ratio && leaf_ratio < leaf_max_ratio && leaf_rect.size.area() < leaf_maxsize) {
                 cv::putText(test_leaf, std::to_string(leaf_rect.size.area()), leaf_rect.center, cv::FONT_HERSHEY_SIMPLEX, 0.5,
                             cv::Scalar(191, 242, 7), 2); // 满足最大面积和比例的限制条件的轮廓--青色--target
                 if (leaf_hierarchies[i][3] <=0 && leaf_hierarchies[i][2] <= 0) {
@@ -124,16 +124,16 @@ void Detector::find_Leaf(const cv::Mat &frame_src) {
                     // ----------------------------------Step3 获取roi-------------------------------------------------
                     cv::Mat test_roi; // 用来测试roi图像
                     frame_src.copyTo(test_roi);
-                    cv::Point2f vertices_leaf[4];
-                    leaf_rect.points(vertices_leaf);
+                    cv::Point2f vertices_roi[4];
+                    leaf_rect.points(vertices_roi);
                     // 防止roi图像越界
-                    if (vertices_leaf[0].x > 0 && vertices_leaf[0].y > 0 && vertices_leaf[1].x > 0 && vertices_leaf[1].y > 0 &&
-                        vertices_leaf[2].x > 0 && vertices_leaf[2].y > 0 && vertices_leaf[3].x > 0 && vertices_leaf[3].y > 0) {
+                    if (vertices_roi[0].x > 0 && vertices_roi[0].y > 0 && vertices_roi[1].x > 0 && vertices_roi[1].y > 0 &&
+                        vertices_roi[2].x > 0 && vertices_roi[2].y > 0 && vertices_roi[3].x > 0 && vertices_roi[3].y > 0) {
 
-                        cv::Point2f upper_Left = vertices_leaf[0]; // 左上角
-                        cv::Point2f upper_Right = vertices_leaf[1]; // 右上角
-                        cv::Point2f lower_Right = vertices_leaf[2]; // 右下角
-                        cv::Point2f lower_Left = vertices_leaf[3]; // 左下角
+                        cv::Point2f upper_Left = vertices_roi[0]; // 左上角
+                        cv::Point2f upper_Right = vertices_roi[1]; // 右上角
+                        cv::Point2f lower_Right = vertices_roi[2]; // 右下角
+                        cv::Point2f lower_Left = vertices_roi[3]; // 左下角
 
                         cv::Rect boundingRectangle = leaf_rect.boundingRect();
                         roi = frame_red(boundingRectangle); // 灰度图的roi图像
@@ -141,10 +141,13 @@ void Detector::find_Leaf(const cv::Mat &frame_src) {
                         cv::imshow("roi", roi);
                         // --------------------------------Step4 寻找关键点----------------------------------------------
                         cv::Mat roi_binary;
-                        cv::threshold(roi, roi_binary, 130, 255, cv::THRESH_BINARY);
+                        cv::threshold(roi, roi_binary, 100, 255, cv::THRESH_BINARY);
                         cv::Mat kernel2 = cv::getStructuringElement(cv::MORPH_RECT, cv::Size(3, 3));
-                        // 膨胀使臂与inrects相连
+                        // 膨胀使臂与inrects相连,区分大矩形和小矩形
                         cv::dilate(roi_binary, roi_binary, kernel2);
+                        cv::imshow("roi_binary_", roi_binary);
+                        // 开运算，消除小白点
+                        cv::morphologyEx(roi_binary, roi_binary, cv::MORPH_OPEN, kernel1);
                         cv::imshow("roi_binary", roi_binary);
 
                         std::vector<std::vector<cv::Point> > roi_contours;
@@ -156,78 +159,63 @@ void Detector::find_Leaf(const cv::Mat &frame_src) {
                         std::vector<cv::RotatedRect> rrect_out;
                         for (auto& roi_contour : roi_contours) {
                             auto roi_rects = cv::minAreaRect(roi_contour);
-                            cv::putText(roi_src, std::to_string(roi_rects.size.area()), roi_rects.center, cv::FONT_HERSHEY_SIMPLEX, 0.5,
-                                    cv::Scalar(185, 11, 219), 2); // 显示出所有轮廓的面积--紫色
+//                            cv::putText(roi_src, std::to_string(roi_rects.size.area()), roi_rects.center, cv::FONT_HERSHEY_SIMPLEX, 0.5,
+//                                    cv::Scalar(185, 11, 219), 2); // 显示出所有轮廓的面积--紫色
+                            // 一共两个矩形， 一个大的一个小的
                             if (roi_rects.size.area() < small_rects_maxArea && roi_rects.size.area() > small_rects_minArea) {
+                                cv::putText(roi_src, std::to_string(roi_rects.size.area()), roi_rects.center, cv::FONT_HERSHEY_SIMPLEX, 0.5,
+                                            cv::Scalar(0, 0, 255), 2); // 小的--红色
                                 rrect_out.emplace_back(roi_rects);
-                                cv::Point2f vertices_roi_small[4];
-                                roi_rects.points(vertices_roi_small);
+//                                cv::Point2f vertices_roi_small[4];
+//                                roi_rects.points(vertices_roi_small);
+//
+//                                // 左上角
+//                                cv::Point2f upper_left_out = vertices_roi_small[0];
+//                                float x_upper_left = upper_Left.x + upper_left_out.x;
+//                                float y_upper_left = upper_Left.y + upper_left_out.y;
+//                                cv::Point2f vertex_upper_left(x_upper_left, y_upper_left);
+//
+//                                // 右上角
+//                                cv::Point2f upper_right_out = vertices_roi_small[1];
+//                                float x_upper_right = upper_Right.x + upper_right_out.x;
+//                                float y_upper_right = upper_Right.y + upper_left_out.y;
+//                                cv::Point2f vertex_upper_right(x_upper_right, y_upper_right);
+//
+//                                // 右下角
+//                                cv::Point2f lower_right_out = vertices_roi_small[2];
+//                                float x_lower_right = lower_Right.x + lower_right_out.x;
+//                                float y_lower_right = lower_Right.y + lower_right_out.y;
+//                                cv::Point2f vertex_lower_right(x_upper_right, y_upper_right);
+//
+//                                // 左下角
+//                                cv::Point2f lower_left_out = vertices_roi_small[3];
+//                                float x_lower_left = lower_Left.x + lower_left_out.x;
+//                                float y_lower_left = lower_Left.y + lower_left_out.y;
+//                                cv::Point2f vertex_lower_left(x_upper_right, y_upper_right);
 
-                                // 左上角
-                                cv::Point2f upper_left_out = vertices_roi_small[0];
-                                float x_upper_left = upper_Left.x + upper_left_out.x;
-                                float y_upper_left = upper_Left.y + upper_left_out.y;
-                                cv::Point2f vertex_upper_left(x_upper_left, y_upper_left);
-
-                                // 右上角
-                                cv::Point2f upper_right_out = vertices_roi_small[1];
-                                float x_upper_right = upper_Right.x + upper_right_out.x;
-                                float y_upper_right = upper_Right.y + upper_left_out.y;
-                                cv::Point2f vertex_upper_right(x_upper_right, y_upper_right);
-
-                                // 右下角
-                                cv::Point2f lower_right_out = vertices_roi_small[2];
-                                float x_lower_right = lower_Right.x + lower_right_out.x;
-                                float y_lower_right = lower_Right.y + lower_right_out.y;
-                                cv::Point2f vertex_lower_right(x_upper_right, y_upper_right);
-
-                                // 左下角
-                                cv::Point2f lower_left_out = vertices_roi_small[3];
-                                float x_lower_left = lower_Left.x + lower_left_out.x;
-                                float y_lower_left = lower_Left.y + lower_left_out.y;
-                                cv::Point2f vertex_lower_left(x_upper_right, y_upper_right);
-
-                                cv::line(test_roi, vertex_upper_left, vertex_upper_right, cv::Scalar(0, 0, 255),1);
-                                cv::line(test_roi, vertex_upper_right, vertex_lower_right, cv::Scalar(0, 0, 255),1);
-                                cv::line(test_roi, vertex_lower_right, vertex_lower_left, cv::Scalar(0, 0, 255),1);
-                                cv::line(test_roi, vertex_lower_left, vertex_upper_left, cv::Scalar(0, 0, 255),1);
-
+//                                cv::line(test_roi, vertex_upper_left, vertex_upper_right, cv::Scalar(0, 0, 255),1);
+//                                cv::line(test_roi, vertex_upper_right, vertex_lower_right, cv::Scalar(0, 0, 255),1);
+//                                cv::line(test_roi, vertex_lower_right, vertex_lower_left, cv::Scalar(0, 0, 255),1);
+//                                cv::line(test_roi, vertex_lower_left, vertex_upper_left, cv::Scalar(0, 0, 255),1);
                             }
+
                             if (roi_rects.size.area() < big_rects_maxArea && roi_rects.size.area() > big_rects_minArea) {
                                 rrect_in.emplace_back(roi_rects);
+                                cv::putText(roi_src, std::to_string(roi_rects.size.area()), roi_rects.center, cv::FONT_HERSHEY_SIMPLEX, 0.5,
+                                            cv::Scalar(0, 255, 0), 2); // 大的--绿色
                             }
-                            for (auto& rect_out : rrect_out) {
+                            if (rrect_in.size() == 1 && rrect_out.size() == 1) {
+                                std::cout << "aksldfhj" << std::endl;
+                                cv::RotatedRect rect_in = rrect_in[0];
+                                cv::RotatedRect rect_out = rrect_out[0];
 
+                                // 找小矩形的两个关键点,将小矩形的四个点的坐标映射回原图像的坐标，再求这四个点与R标的距离，找出距离较小的两个点
+                                cv::Point2f vertices_small[4];
+                                rect_out.points(vertices_small);
                             }
-                            cv::imshow("test_roi", test_roi);
-
+                            cv::imshow("roi_src", roi_src);
                         }
                     }
-
-                    // -------------------------------Step4 寻找关键点---------------------------------------------------
-                    cv::Mat roi_binary;
-//                    cv::threshold(roi, roi_binary, 15, 255, cv::THRESH_BINARY);
-//                    cv::morphologyEx(roi_binary, roi_binary, cv::MORPH_OPEN, kernel1);
-//                    cv::dilate(roi_binary,roi_binary, kernel);
-//                    cv::imshow("roi_binary", roi_binary);
-
-//                    std::vector<std::vector<cv::Point> > roi_contours;
-//                    std::vector<cv::Vec4i> roi_hierarchies;
-//                    cv::findContours(roi_binary, roi_contours, roi_hierarchies, cv::RETR_EXTERNAL, cv::CHAIN_APPROX_SIMPLE);
-//                    cv::drawContours(roi_src, roi_contours, -1, cv::Scalar(0, 0, 255), 2, 8);
-
-//                    std::vector<cv::RotatedRect> small_rects;
-//                    std::vector<cv::RotatedRect> big_rects;
-//                    for (auto& roi_contour : roi_contours) {
-//                        auto roi_rect = cv::minAreaRect(roi_contour);
-//                        cv::putText(roi_src, std::to_string(roi_rect.size.area()), roi_rect.center, cv::FONT_HERSHEY_SIMPLEX, 0.5,
-//                                    cv::Scalar(185, 11, 219), 2); // 显示出所有轮廓的面积--紫色
-//                        if (roi_rect.size.area() > 1500 && roi_rect.size.area() < 2500)
-//                            small_rects.emplace_back(roi_rect);
-//                        if (roi_rect.size.area() > 7500 && roi_rect.size.area() < 8500)
-//                            big_rects.emplace_back(roi_rect);
-//                        cv::imshow("roi_src", roi_src);
-//                    }
                 }
             }
         }
@@ -236,7 +224,8 @@ void Detector::find_Leaf(const cv::Mat &frame_src) {
 }
 
 
-void Detector::find_Arm(const cv::Mat& frame_src) {
+// 已弃用
+/* void Detector::find_Arm(const cv::Mat& frame_src) {
     cv::Mat test_arm; // 用于寻找扇叶的测试图像
     frame_src.copyTo(test_arm);
 
@@ -294,10 +283,10 @@ void Detector::find_Arm(const cv::Mat& frame_src) {
         }
     }
     cv::imshow("video_arm", test_arm);
-}
+} */
 
 
-cv::Mat Detector::find_Target(const cv::Mat &frame) {
+/* cv::Mat Detector::find_Target(const cv::Mat &frame) {
     cv::Mat result; // 用于寻找击打点的测试图像
     frame.copyTo(result);
     cv::Point2f target; // 目标点
@@ -349,7 +338,7 @@ cv::Mat Detector::find_Target(const cv::Mat &frame) {
                         0.5,cv::Scalar(0, 255, 0), 2);
     cv::imshow("result", result);
     return result;
-}
+} */
 
 void Detector::drawRotatedRect(cv::Mat &img, const cv::RotatedRect &rect, const cv::Scalar &color, int thickness) {
     cv::Point2f Vertex[4];

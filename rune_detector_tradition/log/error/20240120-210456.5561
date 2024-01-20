@@ -1,0 +1,39 @@
+Log file created at: 2024/01/20 21:04:56
+Running on machine: zps-Dell-G15-5511
+Running duration (h:mm:ss): 0:07:41
+Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu threadid file:line] msg
+(HikDriver.cpp:508)[ERROR][2024-00-20 21:04:56] readImageData() error code: [0x80000007] => 无数据
+(HikDriver.cpp:508)[ERROR][2024-00-20 21:04:57] readImageData() error code: [0x80000007] => 无数据
+(HikDriver.cpp:508)[ERROR][2024-00-20 21:04:58] readImageData() error code: [0x80000007] => 无数据
+(HikDriver.cpp:508)[ERROR][2024-00-20 21:04:59] readImageData() error code: [0x80000007] => 无数据
+(HikDriver.cpp:508)[ERROR][2024-00-20 21:05:00] readImageData() error code: [0x80000007] => 无数据
+(HikDriver.cpp:508)[ERROR][2024-00-20 21:05:01] readImageData() error code: [0x80000007] => 无数据
+(HikDriver.cpp:508)[ERROR][2024-00-20 21:05:02] readImageData() error code: [0x80000007] => 无数据
+(HikDriver.cpp:508)[ERROR][2024-00-20 21:05:03] readImageData() error code: [0x80000007] => 无数据
+(HikDriver.cpp:508)[ERROR][2024-00-20 21:05:04] readImageData() error code: [0x80000007] => 无数据
+(HikDriver.cpp:508)[ERROR][2024-00-20 21:05:05] readImageData() error code: [0x80000007] => 无数据
+(HikDriver.cpp:508)[ERROR][2024-00-20 21:05:06] readImageData() error code: [0x80000007] => 无数据
+(HikDriver.cpp:508)[ERROR][2024-00-20 21:05:07] readImageData() error code: [0x80000007] => 无数据
+(HikDriver.cpp:508)[ERROR][2024-00-20 21:05:08] readImageData() error code: [0x80000007] => 无数据
+(HikDriver.cpp:508)[ERROR][2024-00-20 21:05:09] readImageData() error code: [0x80000007] => 无数据
+(HikDriver.cpp:508)[ERROR][2024-00-20 21:05:10] readImageData() error code: [0x80000007] => 无数据
+(HikDriver.cpp:508)[ERROR][2024-00-20 21:05:11] readImageData() error code: [0x80000007] => 无数据
+(HikDriver.cpp:508)[ERROR][2024-00-20 21:05:12] readImageData() error code: [0x80000007] => 无数据
+(HikDriver.cpp:508)[ERROR][2024-00-20 21:05:13] readImageData() error code: [0x80000007] => 无数据
+(HikDriver.cpp:508)[ERROR][2024-00-20 21:05:14] readImageData() error code: [0x80000007] => 无数据
+(HikDriver.cpp:508)[ERROR][2024-00-20 21:05:15] readImageData() error code: [0x80000007] => 无数据
+(HikDriver.cpp:508)[ERROR][2024-00-20 21:05:16] readImageData() error code: [0x80000007] => 无数据
+(HikDriver.cpp:508)[ERROR][2024-00-20 21:05:17] readImageData() error code: [0x80000007] => 无数据
+(HikDriver.cpp:508)[ERROR][2024-00-20 21:05:18] readImageData() error code: [0x80000007] => 无数据
+(HikDriver.cpp:508)[ERROR][2024-00-20 21:05:19] readImageData() error code: [0x80000007] => 无数据
+(HikDriver.cpp:508)[ERROR][2024-00-20 21:05:20] readImageData() error code: [0x80000007] => 无数据
+(HikDriver.cpp:508)[ERROR][2024-00-20 21:05:21] readImageData() error code: [0x80000007] => 无数据
+(HikDriver.cpp:508)[ERROR][2024-00-20 21:05:22] readImageData() error code: [0x80000007] => 无数据
+(HikDriver.cpp:508)[ERROR][2024-00-20 21:05:23] readImageData() error code: [0x80000007] => 无数据
+(HikDriver.cpp:508)[ERROR][2024-00-20 21:05:24] readImageData() error code: [0x80000007] => 无数据
+(HikDriver.cpp:508)[ERROR][2024-00-20 21:05:25] readImageData() error code: [0x80000007] => 无数据
+(HikDriver.cpp:508)[ERROR][2024-00-20 21:05:26] readImageData() error code: [0x80000007] => 无数据
+(HikDriver.cpp:508)[ERROR][2024-00-20 21:05:27] readImageData() error code: [0x80000007] => 无数据
+(HikDriver.cpp:508)[ERROR][2024-00-20 21:05:28] readImageData() error code: [0x80000007] => 无数据
+(HikDriver.cpp:508)[ERROR][2024-00-20 21:05:29] readImageData() error code: [0x80000007] => 无数据
+(HikDriver.cpp:508)[ERROR][2024-00-20 21:05:30] readImageData() error code: [0x80000007] => 无数据

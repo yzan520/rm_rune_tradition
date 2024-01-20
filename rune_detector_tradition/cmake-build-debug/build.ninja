@@ -408,7 +408,7 @@ build src/vision_debug_widgets/vision_debug_widgets_autogen/timestamp src/vision
 #############################################
 # Phony custom command for src/vision_debug_widgets/CMakeFiles/vision_debug_widgets_autogen_timestamp_deps
 
-build src/vision_debug_widgets/CMakeFiles/vision_debug_widgets_autogen_timestamp_deps | ${cmake_ninja_workdir}src/vision_debug_widgets/CMakeFiles/vision_debug_widgets_autogen_timestamp_deps: phony /usr/local/Qt/5.15.2/gcc_64/bin/moc /usr/local/Qt/5.15.2/gcc_64/lib/libQt5Core.so.5.15.2 /usr/local/Qt/5.15.2/gcc_64/lib/libQt5Widgets.so.5.15.2 /usr/local/Qt/5.15.2/gcc_64/lib/libQt5Gui.so.5.15.2 /usr/local/Qt/5.15.2/gcc_64/bin/uic
+build src/vision_debug_widgets/CMakeFiles/vision_debug_widgets_autogen_timestamp_deps | ${cmake_ninja_workdir}src/vision_debug_widgets/CMakeFiles/vision_debug_widgets_autogen_timestamp_deps: phony /usr/local/Qt/5.15.2/gcc_64/bin/moc /usr/local/Qt/5.15.2/gcc_64/bin/uic /usr/local/Qt/5.15.2/gcc_64/lib/libQt5Core.so.5.15.2 /usr/local/Qt/5.15.2/gcc_64/lib/libQt5Widgets.so.5.15.2 /usr/local/Qt/5.15.2/gcc_64/lib/libQt5Gui.so.5.15.2
 
 
 #############################################
@@ -516,7 +516,7 @@ build src/buff_auto_aim/buff_auto_aim_autogen/timestamp src/buff_auto_aim/buff_a
 #############################################
 # Phony custom command for src/buff_auto_aim/CMakeFiles/buff_auto_aim_autogen_timestamp_deps
 
-build src/buff_auto_aim/CMakeFiles/buff_auto_aim_autogen_timestamp_deps | ${cmake_ninja_workdir}src/buff_auto_aim/CMakeFiles/buff_auto_aim_autogen_timestamp_deps: phony src/detector_rune/librune_detector.a src/HikDriver/libhik_driver.a src/google_logger/libgoogle_logger.a src/HikDriver/libhik_ui.a /usr/local/Qt/5.15.2/gcc_64/lib/libQt5Gui.so.5.15.2 /usr/local/Qt/5.15.2/gcc_64/lib/libQt5Core.so.5.15.2 /usr/local/Qt/5.15.2/gcc_64/lib/libQt5SerialPort.so.5.15.2 /usr/local/Qt/5.15.2/gcc_64/bin/moc /usr/local/Qt/5.15.2/gcc_64/lib/libQt5Widgets.so.5.15.2 /usr/local/Qt/5.15.2/gcc_64/bin/uic || src/HikDriver/libhik_driver.a src/HikDriver/libhik_ui.a src/detector_rune/librune_detector.a src/google_logger/libgoogle_logger.a src/vision_debug_widgets/libvision_debug_widgets.a src/vision_debug_widgets/vision_debug_widgets_autogen src/vision_debug_widgets/vision_debug_widgets_autogen_timestamp_deps
+build src/buff_auto_aim/CMakeFiles/buff_auto_aim_autogen_timestamp_deps | ${cmake_ninja_workdir}src/buff_auto_aim/CMakeFiles/buff_auto_aim_autogen_timestamp_deps: phony src/detector_rune/librune_detector.a src/HikDriver/libhik_driver.a /usr/local/Qt/5.15.2/gcc_64/lib/libQt5Core.so.5.15.2 src/google_logger/libgoogle_logger.a src/HikDriver/libhik_ui.a /usr/local/Qt/5.15.2/gcc_64/bin/uic /usr/local/Qt/5.15.2/gcc_64/lib/libQt5SerialPort.so.5.15.2 /usr/local/Qt/5.15.2/gcc_64/lib/libQt5Widgets.so.5.15.2 /usr/local/Qt/5.15.2/gcc_64/lib/libQt5Gui.so.5.15.2 /usr/local/Qt/5.15.2/gcc_64/bin/moc || src/HikDriver/libhik_driver.a src/HikDriver/libhik_ui.a src/detector_rune/librune_detector.a src/google_logger/libgoogle_logger.a src/vision_debug_widgets/libvision_debug_widgets.a src/vision_debug_widgets/vision_debug_widgets_autogen src/vision_debug_widgets/vision_debug_widgets_autogen_timestamp_deps
 
 
 #############################################

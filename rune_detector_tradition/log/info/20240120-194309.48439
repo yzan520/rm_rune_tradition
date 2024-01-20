@@ -1,0 +1,27 @@
+Log file created at: 2024/01/20 19:43:09
+Running on machine: zps-Dell-G15-5511
+Running duration (h:mm:ss): 0:00:00
+Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu threadid file:line] msg
+(HikDriver.cpp:163)[INFO][2024-00-20 19:43:09] Number of available Hik-devices: 1
+(HikDriver.cpp:140)[INFO][2024-00-20 19:43:10] Connect hik => [DriverInfo => name: MV-CS016-10UC; type: USB; ip: ;]
+(HikDriver.cpp:101)[INFO][2024-00-20 19:43:10] 
+=========================================
+Param Info: index: 0; [DriverInfo => name: MV-CS016-10UC; type: USB; ip: ;]
+    Trigger Mode: OFF
+    Trigger Source: Line0
+    Trigger Delay: 0
+    Auto Exposure Time: Off
+    Auto Gain: Off
+    Exposure Time:
+        current: 8000
+        min: 15
+        max: 9999813
+    Gain: 
+        current: 11.9906
+        min: 0
+        max: 16.9807
+=========================================
+(HikDriver.cpp:490)[INFO][2024-00-20 19:43:10] Hik frame stream starting...
+(main.cpp:38)[INFO][2024-00-20 19:43:11] main_thread: 0x7f7a4119b000;
+(buff_auto_aim.cpp:18)[INFO][2024-00-20 19:43:11] buff_auto_aim_thread0x7f79f5ffb000
+(HikDriver.cpp:508)[ERROR][2024-00-20 20:05:55] readImageData() error code: [0x80000007] => 无数据

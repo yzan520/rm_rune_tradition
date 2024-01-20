@@ -24,21 +24,9 @@
  *            佛祖保佑       永不宕机     永无BUG
  */
 
-#include <QApplication>
-#include <QThread>
+#define DEBUG
 
-#include <google_logger/google_logger.h>
-#include <buff_auto_aim/buff_auto_aim.h>
-
-//int main(int argc, char* argv[]) {
-//    armor_auto_aim::google_log::initGoogleLogger(argc, argv);
-//    QApplication app(argc, argv);
-//    buff_auto_aim::BuffAutoAim auto_aim_thread;
-//    auto_aim_thread.start();
-//    LOG(INFO) << fmt::format("main_thread: {};", QThread::currentThreadId());
-//    return QApplication::exec();
-//}
-
+#ifdef DEBUG
 #include <detector_rune/detector_rune.h>
 
 #include <iostream>
@@ -68,7 +56,7 @@ int main() {
         cv::imshow("src", frame_src);
 
         Detector rune;
-//        rune.find_R(frame_src);
+        rune.find_R(frame_src);
         rune.find_Leaf(frame_src);
 //        rune.find_Arm(frame_src);
 //        cv::Mat result = rune.fin d_Target(frame_src);
@@ -83,3 +71,20 @@ int main() {
     cv::destroyAllWindows();
     return 0;
 }
+
+#else
+#include <QApplication>
+#include <QThread>
+
+#include <google_logger/google_logger.h>
+#include <buff_auto_aim/buff_auto_aim.h>
+
+int main(int argc, char* argv[]) {
+    armor_auto_aim::google_log::initGoogleLogger(argc, argv);
+    QApplication app(argc, argv);
+    buff_auto_aim::BuffAutoAim auto_aim_thread;
+    auto_aim_thread.start();
+    LOG(INFO) << fmt::format("main_thread: {};", QThread::currentThreadId());
+    return QApplication::exec();
+}
+#endif
