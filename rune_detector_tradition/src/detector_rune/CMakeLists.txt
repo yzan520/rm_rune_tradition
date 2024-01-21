@@ -13,9 +13,13 @@ target_include_directories(rune_detector PUBLIC include)
 find_package(OpenCV REQUIRED)
 find_package(glog 0.6.0 REQUIRED)
 find_package(fmt REQUIRED)
+find_package(Eigen3 REQUIRED)
 
 target_link_libraries(rune_detector PUBLIC
         ${OpenCV_LIBS}
         glog::glog
+        solver
         fmt::fmt
+        Eigen3::Eigen
+        serial_port
         )

@@ -6,6 +6,7 @@ cmake_policy(SET CMP0009 NEW)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/buff_auto_aim/include/*.h")
 set(OLD_GLOB
   "/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/buff_auto_aim/include/buff_auto_aim/buff_auto_aim.h"
+  "/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/buff_auto_aim/include/buff_auto_aim/pnpsolver.h"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -16,6 +17,7 @@ endif()
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/buff_auto_aim/src/*.cpp")
 set(OLD_GLOB
   "/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/buff_auto_aim/src/buff_auto_aim.cpp"
+  "/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/buff_auto_aim/src/pnpsolver.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -56,6 +58,56 @@ endif()
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/google_logger/src/*.cpp")
 set(OLD_GLOB
   "/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/google_logger/src/google_logger.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/CMakeFiles/cmake.verify_globs")
+endif()
+
+# sources at src/serial_port/CMakeLists.txt:6 (file)
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/serial_port/include/*.h")
+set(OLD_GLOB
+  "/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/serial_port/include/serial_port/CRC.h"
+  "/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/serial_port/include/serial_port/VCOMCOMM.h"
+  "/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/serial_port/include/serial_port/communicate_protocol.h"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/CMakeFiles/cmake.verify_globs")
+endif()
+
+# sources at src/serial_port/CMakeLists.txt:6 (file)
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/serial_port/src/*.cpp")
+set(OLD_GLOB
+  "/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/serial_port/src/CRC.cpp"
+  "/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/serial_port/src/VCOMCOMM.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/CMakeFiles/cmake.verify_globs")
+endif()
+
+# sources at src/solver/CMakeLists.txt:1 (file)
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/solver/include/*.h")
+set(OLD_GLOB
+  "/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/solver/include/solver/coord_utils.h"
+  "/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/solver/include/solver/coordinate_solver.h"
+  "/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/solver/include/solver/pnpsolver.h"
+  "/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/solver/include/solver/solver.h"
+  "/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/solver/include/solver/solver_interface.h"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/CMakeFiles/cmake.verify_globs")
+endif()
+
+# sources at src/solver/CMakeLists.txt:1 (file)
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/solver/src/*.cpp")
+set(OLD_GLOB
+  "/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/solver/src/coord_utils.cpp"
+  "/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/solver/src/coordinate_solver.cpp"
+  "/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/solver/src/pnpsolver.cpp"
+  "/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/solver/src/solver.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

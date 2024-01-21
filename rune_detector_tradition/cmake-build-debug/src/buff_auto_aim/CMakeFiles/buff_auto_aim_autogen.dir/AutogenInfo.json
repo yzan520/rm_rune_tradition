@@ -74,6 +74,12 @@
 			"MU",
 			"3FHKTAFFKG/moc_buff_auto_aim.cpp",
 			null
+		],
+		[
+			"/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/buff_auto_aim/include/buff_auto_aim/pnpsolver.h",
+			"MU",
+			"3FHKTAFFKG/moc_pnpsolver.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -85,7 +91,8 @@
 		"QT_CORE_LIB",
 		"QT_GUI_LIB",
 		"QT_SERIALPORT_LIB",
-		"QT_WIDGETS_LIB"
+		"QT_WIDGETS_LIB",
+		"YAML_CPP_STATIC_DEFINE"
 	],
 	"MOC_DEPEND_FILTERS" : 
 	[
@@ -98,17 +105,20 @@
 	[
 		"/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/buff_auto_aim/include",
 		"/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/detector_rune/include",
+		"/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/solver/include",
 		"/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/google_logger/include",
+		"/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/serial_port/include",
 		"/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/HikDriver/include",
 		"/opt/MVS/include",
 		"/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/vision_debug_widgets/include",
 		"/usr/local/include/opencv4",
+		"/usr/include/eigen3",
 		"/usr/local/Qt/5.15.2/gcc_64/include",
 		"/usr/local/Qt/5.15.2/gcc_64/include/QtCore",
 		"/usr/local/Qt/5.15.2/gcc_64/mkspecs/linux-g++",
+		"/usr/local/Qt/5.15.2/gcc_64/include/QtSerialPort",
 		"/usr/local/Qt/5.15.2/gcc_64/include/QtWidgets",
 		"/usr/local/Qt/5.15.2/gcc_64/include/QtGui",
-		"/usr/local/Qt/5.15.2/gcc_64/include/QtSerialPort",
 		"/usr/local/include",
 		"/usr/include",
 		"/usr/include/c++/11",
@@ -143,6 +153,11 @@
 	[
 		[
 			"/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/buff_auto_aim/src/buff_auto_aim.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/buff_auto_aim/src/pnpsolver.cpp",
 			"MU",
 			null
 		]

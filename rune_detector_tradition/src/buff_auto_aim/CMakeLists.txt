@@ -18,7 +18,10 @@ target_link_libraries(buff_auto_aim PUBLIC
         Qt5::Core
         Qt5::Gui
         Qt5::Widgets
-        Qt5::SerialPort)
+        Qt5::SerialPort
+        solver
+        serial_port
+        )
 
 
 

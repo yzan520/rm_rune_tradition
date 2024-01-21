@@ -8,6 +8,8 @@ add_subdirectory(src/HikDriver)
 add_subdirectory(src/google_logger)
 add_subdirectory(src/vision_debug_widgets)
 add_subdirectory(src/buff_auto_aim)
+add_subdirectory(src/solver)
+add_subdirectory(src/serial_port)
 
 add_executable(${PROJECT_NAME} src/main.cpp)
 

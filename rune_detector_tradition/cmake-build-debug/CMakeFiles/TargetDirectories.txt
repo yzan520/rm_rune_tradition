@@ -21,3 +21,11 @@
 /home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/buff_auto_aim/CMakeFiles/rebuild_cache.dir
 /home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/buff_auto_aim/CMakeFiles/buff_auto_aim_autogen_timestamp_deps.dir
 /home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/buff_auto_aim/CMakeFiles/buff_auto_aim_autogen.dir
+/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/solver/CMakeFiles/solver.dir
+/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/solver/CMakeFiles/edit_cache.dir
+/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/solver/CMakeFiles/rebuild_cache.dir
+/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/serial_port/CMakeFiles/serial_port.dir
+/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/serial_port/CMakeFiles/edit_cache.dir
+/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/serial_port/CMakeFiles/rebuild_cache.dir
+/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/serial_port/CMakeFiles/serial_port_autogen_timestamp_deps.dir
+/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/serial_port/CMakeFiles/serial_port_autogen.dir

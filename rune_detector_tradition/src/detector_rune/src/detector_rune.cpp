@@ -4,8 +4,10 @@
 
 #include <detector_rune/detector_rune.h>
 #include <vector>
+#include <cmath>
 
 #include <opencv2/opencv.hpp>
+#include <opencv2/core/eigen.hpp>
 #include <Eigen/Dense>
 #include <fmt/color.h>
 
@@ -24,7 +26,7 @@ void Detector::find_R(const cv::Mat& frame_src) {
     cv::Mat frame_blue;
     // 获取蓝色通道图像(灰度图),数值为BGR->RGB前的红色通道的数值
     channels[0].copyTo(frame_blue);
-    cv::imshow("blue", frame_blue);
+//    cv::imshow("blue", frame_blue);
 
     // Threshold the image 二值化
     cv::threshold(frame_blue, frame_R_binary, R_thresholdValue, 255, cv::THRESH_BINARY);
@@ -32,7 +34,7 @@ void Detector::find_R(const cv::Mat& frame_src) {
     // Close morphological operation 闭运算->填充小型空洞
     cv::Mat kernel = cv::getStructuringElement(cv::MORPH_RECT, cv::Size(5, 5));
     cv::morphologyEx(frame_R_binary, frame_R_binary, cv::MORPH_CLOSE, kernel);
-    cv::imshow("binary_R", frame_R_binary);
+//    cv::imshow("binary_R", frame_R_binary);
 
 
     // Find and Draw all contours
@@ -235,6 +237,11 @@ float Detector::distance(cv::Point a,cv::Point b) {
     return sqrt((a.x -b.x)*(a.x -b.x) + (a.y -b.y)*(a.y -b.y));
 }
 
+void Detector::translatoin2YawPitch(const Eigen::Vector3d &translation) {
+    yaw = static_cast<float>(atan2(translation(0), translation(2)) * 180.0f / M_PI);
+    pitch = static_cast<float>(atan2(translation(1), translation(2)) * 180.0f / M_PI);
+}
+
 // 已弃用
 void Detector::find_Arm(const cv::Mat& frame_src) {
     cv::Mat test_arm; // 用于显示扇叶的测试图像
@@ -286,14 +293,43 @@ void Detector::find_Arm(const cv::Mat& frame_src) {
                     arm_rects.emplace_back(arm_rect);
                     if (arm_rects.size() == 1) {
                         drawRotatedRect(test_arm, arm_rect, cv::Scalar(0, 255, 0), 1);
-                        cv::putText(test_arm, std::to_string(arm_rect.size.area()), arm_rect.center, cv::FONT_HERSHEY_SIMPLEX, 0.5,
+                        cv::putText(test_arm, std::to_string(arm_rect.size.area()), arm_rect.center,
+                                    cv::FONT_HERSHEY_SIMPLEX, 0.5,
                                     cv::Scalar(0, 255, 0), 2); // 满足所有的限制条件的轮廓--绿色--target
-                        // 计算矩
-                        rect = cv::moments(contour, false);
-                        // 计算中心矩
-                        rectmid = cv::Point2d(rect.m10 / rect.m00 , rect.m01 / rect.m00);
-                        cv::circle(test_arm, rectmid, 3, cv::Scalar(255, 0, 0), 2, 8, 0);
+                        arm_rect.points(vertex_arm); // FIXME 为什么.h文件中把else后的注释掉就会报错
+                        for (int i = 0; i < 4; i++) {
+                            std::cout << "Vertices_arm " << i + 1 << ": (" << vertex_arm[i].x << ", " << vertex_arm[i].y
+                                      << ")\n";
+                            key_points.emplace_back(vertex_arm[i].x, vertex_arm[i].y); // 存储关键点
+                        }
+
+                        double arm_half_x = arm_width / 2.0 / 1000.0;
+                        double arm_half_y = arm_width / 2.0 / 1000.0;
+
+                        // 计算物体坐标系 3d Points(lt lb rb rt)
+                        objects_points.emplace_back(cv::Point3f(arm_half_x, arm_half_y, 0));
+                        objects_points.emplace_back(cv::Point3f(arm_half_x, -arm_half_y, 0));
+                        objects_points.emplace_back(cv::Point3f(-arm_half_x, -arm_half_y, 0));
+                        objects_points.emplace_back(cv::Point3f(-arm_half_x, arm_half_y, 0));
+
+                        if (objects_points.size() == 4 && key_points.size() == 4) {
+                            // pnp 解算
+                            cv::solvePnP(objects_points, key_points, cameraMatrix, distCoeffs, rvec, tvec, false,
+                                         cv::SOLVEPNP_IPPE);
+                            cv::cv2eigen(tvec, transslation_vector);
+                            std::cout << "Eigen Translation Vector: " << transslation_vector.transpose() << std::endl;
+
+                            // 转化为pitch, yaw
+                            translatoin2YawPitch(transslation_vector);
+                            // TODO 串口，转换成IMU世界坐标系，卡尔曼，弹道解算
+
+                        }
                     }
+                    // 计算矩
+                    rect = cv::moments(contour, false);
+                    // 计算中心矩
+                    rectmid = cv::Point2d(rect.m10 / rect.m00, rect.m01 / rect.m00);
+                    cv::circle(test_arm, rectmid, 3, cv::Scalar(255, 0, 0), 2, 8, 0);
                 }
             }
         }

@@ -6,6 +6,11 @@
 #define RM_RUNE_DETECTION_DETECTOR_RUNE_H
 
 #include <opencv2/opencv.hpp>
+#include <Eigen/Dense>
+
+#include <serial_port/VCOMCOMM.h>
+#include <serial_port/communicate_protocol.h>
+
 
 class Detector {
 public:
@@ -52,6 +57,8 @@ public:
      * @return 两点间距离
      */
     float distance(cv::Point a, cv::Point b);
+
+    void translatoin2YawPitch(const Eigen::Vector3d& translation);
 
 private:
 #ifdef DEBUG
@@ -112,17 +119,40 @@ private:
     float max_arm_area = 9500;
     float min_arm_ratio = 0.7;
     float max_arm_ratio = 2.0;
+    cv::Point2f vertex_arm[4];
+    std::vector<cv::Point2f> key_points; // 小臂旋转矩形的四个顶点
     cv::Moments rect;
     cv::Point2f rectmid;
 #else
+    // FIXME 小臂相关变量 -- 投影
     int arm_thresholdValue = 0;
     float min_arm_area;
     float max_arm_area;
     float min_arm_ratio;
     float max_arm_ratio;
+    cv::Point2f vertex_arm[4];
+    std::vector<cv::Point2f> key_points; // 小臂旋转矩形的四个顶点
     cv::Moments rect;
     cv::Point2f rectmid;
 #endif
+
+    int arm_width = 0;
+    int arm_height = 0;
+    std::vector<cv::Point3f> objects_points; // 物体坐标
+    cv::Mat rvec; // 旋转矩阵
+    cv::Mat tvec; // 平移矩阵
+    Eigen::Vector3d transslation_vector;
+
+    cv::Mat cameraMatrix = (cv::Mat_<float> (3, 3) << 2665.005527408399, 0,                 696.8233,
+                                                                 0,                 2673.364537791387, 500.5147099572225,
+                                                                 0,                 0,                 1);
+
+    cv::Mat distCoeffs = (cv::Mat_<float>(1, 5) << -0.303608974614145, 4.163247825941419, -0.008432853056627, -0.003830248744148, 0);
+
+    float yaw{};
+    float pitch{};
+
+
 };
 
 

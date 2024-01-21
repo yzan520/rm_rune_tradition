@@ -67,6 +67,16 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/buff_auto_aim/cmake_install.cmake")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/solver/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/serial_port/cmake_install.cmake")
+endif()
+
 if(CMAKE_INSTALL_COMPONENT)
   set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
 else()
