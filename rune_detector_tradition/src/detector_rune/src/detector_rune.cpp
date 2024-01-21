@@ -308,16 +308,16 @@ cv::Mat Detector::find_Target(const cv::Mat &frame) {
     double multiple = 1.5; // 倍率，换算目标点所用
 
     // First quadrant
-    if (rectmid.x >= center.x && rectmid.y >= center.y)
+    if (rectmid.x >= center.x && rectmid.y <= center.y)
         target = cv::Point2d(center.x + (rectmid.x - center.x) * multiple, center.y - (center.y - rectmid.y) * multiple);
     // Second quadrant
-    if (rectmid.x <= center.x && rectmid.y >= center.y)
+    if (rectmid.x <= center.x && rectmid.y <= center.y)
 		target = cv::Point2d(center.x - (center.x - rectmid.x) * multiple, center.y - (center.y - rectmid.y) * multiple);
     // Third quadrant
-    if (rectmid.x <= center.x && rectmid.y <= center.y)
+    if (rectmid.x <= center.x && rectmid.y >= center.y)
         target = cv::Point2d(center.x - (center.x - rectmid.x) * multiple, center.y + (rectmid.y - center.y) * multiple);
     // Fourth Quadrant
-    if (rectmid.x >= center.x && rectmid.y <= center.y)
+    if (rectmid.x >= center.x && rectmid.y >= center.y)
         target = cv::Point2d(center.x + (rectmid.x - center.x) * multiple, center.y + (rectmid.y - center.y) * multiple);
 
     fmt::print(fmt::fg(fmt::color::blue) | fmt::emphasis::bold, "预测前的击打点({},{})\n", target.x, target.y);
