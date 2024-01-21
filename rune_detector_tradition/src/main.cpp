@@ -56,8 +56,10 @@ int main() {
         cv::imshow("src", frame_src);
 
         Detector rune;
-        rune.find_R(frame_src);
-        rune.find_Leaf(frame_src);
+//        rune.find_R(frame_src);
+        rune.find_Arm(frame_src);
+        rune.find_Target(frame_src);
+//        rune.find_Leaf(frame_src);
 
         cv::waitKey(0);
 //        if (cv::waitKey(30) == 'q') {

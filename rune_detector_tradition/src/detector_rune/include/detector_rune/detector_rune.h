@@ -22,8 +22,17 @@ public:
      */
     void find_Leaf(const cv::Mat & frame_src);
 
+    /**
+     * @brief 找小臂
+     * @param frame_src
+     */
     void find_Arm(const cv::Mat & frame_src); // 已弃用 -- 寻找小臂
 
+    /**
+     * @brief 找击打点
+     * @param frame
+     * @return
+     */
     cv::Mat find_Target(const cv::Mat & frame); // 已弃用--寻找击打点与上函数配套使用
 
 
@@ -94,6 +103,25 @@ private:
     std::vector<cv::Point2f> k_points; // 存储关键点
     int small_rects_minArea = 1500, small_rects_maxArea = 2500;
     int big_rects_minArea = 6500, big_rects_maxArea = 8000;
+#endif
+
+#ifdef DEBUG
+    // FIXME 小臂相关变量 -- 视频
+    int arm_thresholdValue = 90;
+    float min_arm_area = 7400;
+    float max_arm_area = 9500;
+    float min_arm_ratio = 0.7;
+    float max_arm_ratio = 2.0;
+    cv::Moments rect;
+    cv::Point2f rectmid;
+#else
+    int arm_thresholdValue = 0;
+    float min_arm_area;
+    float max_arm_area;
+    float min_arm_ratio;
+    float max_arm_ratio;
+    cv::Moments rect;
+    cv::Point2f rectmid;
 #endif
 };
 

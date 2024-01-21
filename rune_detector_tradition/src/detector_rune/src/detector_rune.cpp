@@ -236,7 +236,7 @@ float Detector::distance(cv::Point a,cv::Point b) {
 }
 
 // 已弃用
-/* void Detector::find_Arm(const cv::Mat& frame_src) {
+void Detector::find_Arm(const cv::Mat& frame_src) {
     cv::Mat test_arm; // 用于显示扇叶的测试图像
     frame_src.copyTo(test_arm);
 
@@ -244,17 +244,19 @@ float Detector::distance(cv::Point a,cv::Point b) {
     cv::split(frame_src, channels);
     cv::Mat arm_red;
     channels[2].copyTo(arm_red);
-    cv::imshow("red", arm_red);
+//    cv::imshow("red", arm_red);
 
+    // TODO 完善预处理
     // Threshold the image 二值化
-    cv::threshold(arm_red, frame_arm_binary, arm_thresholdValue, 255, cv::THRESH_BINARY);
-    // 开运算，消除白点，平滑物体边界
+    cv::Mat frame_arm_binary;
+    cv::threshold(arm_red, frame_arm_binary, 110, 255, cv::THRESH_BINARY);
+//    cv::imshow("binary_arm", frame_arm_binary);
     cv::Mat kernel = cv::getStructuringElement(cv::MORPH_RECT, cv::Size(3, 3));
     cv::Mat kernel1 = cv::getStructuringElement(cv::MORPH_RECT, cv::Size(7, 7));
+    // 开运算，消除白点，平滑物体边界
     cv::morphologyEx(frame_arm_binary, frame_arm_binary, cv::MORPH_OPEN, kernel);
     // 膨胀->增大图像中的白色区域
     cv::dilate(frame_arm_binary,frame_arm_binary,kernel1);
-    cv::imshow("binary_arm", frame_arm_binary);
 
 
     std::vector<std::vector<cv::Point>> arm_contours;
@@ -267,28 +269,31 @@ float Detector::distance(cv::Point a,cv::Point b) {
         auto const& contour = arm_contours[i];
         // Approximate the contour
         auto arm_rect = cv::minAreaRect(contour);
-        cv::putText(test_arm, std::to_string(arm_rect.size.area()), arm_rect.center, cv::FONT_HERSHEY_SIMPLEX, 0.5,
-                    cv::Scalar(185, 11, 219), 2); // 找出所有轮廓--紫色
+//        cv::putText(test_arm, std::to_string(arm_rect.size.area()), arm_rect.center, cv::FONT_HERSHEY_SIMPLEX, 0.5,
+//                    cv::Scalar(185, 11, 219), 2); // 找出所有轮廓--紫色
         // Use area to check if the contour is the arm_contour or not
         if (arm_rect.size.area() > min_arm_area) {
             // Use area to check if the contour is the leaf_contour or not
             float arm_ratio =arm_rect.size.width > arm_rect.size.height ? arm_rect.size.width / arm_rect.size.height
                                                                           : arm_rect.size.height / arm_rect.size.width;
-            cv::putText(test_arm, std::to_string(arm_rect.size.area()), arm_rect.center, cv::FONT_HERSHEY_SIMPLEX,
-                        0.5,cv::Scalar(5, 240, 240), 2); // 满足最小面积的限制条件的轮廓--黄色
+            std::cout << arm_ratio << std::endl;
+//            cv::putText(test_arm, std::to_string(arm_rect.size.area()), arm_rect.center, cv::FONT_HERSHEY_SIMPLEX,
+//                        0.5,cv::Scalar(5, 240, 240), 2); // 满足最小面积的限制条件的轮廓--黄色
             if (min_arm_ratio < arm_ratio && arm_ratio < max_arm_ratio && arm_rect.size.area() < max_arm_area) {
-                cv::putText(test_arm, std::to_string(arm_rect.size.area()), arm_rect.center, cv::FONT_HERSHEY_SIMPLEX, 0.5,
-                            cv::Scalar(191, 242, 7), 2); // 满足最大面积和比例的限制条件的轮廓--青色--target
+//                cv::putText(test_arm, std::to_string(arm_rect.size.area()), arm_rect.center, cv::FONT_HERSHEY_SIMPLEX, 0.5,
+//                            cv::Scalar(191, 242, 7), 2); // 满足最大面积和比例的限制条件的轮廓--青色
                 if (arm_hierarchies[i][3] <= 0 && arm_hierarchies[i][2] <= 0) { // 没有父轮廓也没有子轮廓
                     arm_rects.emplace_back(arm_rect);
-                    drawRotatedRect(test_arm, arm_rect, cv::Scalar(0, 255, 0), 1);
-                    cv::putText(test_arm, std::to_string(arm_rect.size.area()), arm_rect.center, cv::FONT_HERSHEY_SIMPLEX, 0.5,
-                            cv::Scalar(0, 255, 0), 2); // 满足所有的限制条件的轮廓--绿色--target
-                    // 计算矩
-                    rect = cv::moments(contour, false);
-                    // 计算中心矩
-                    rectmid = cv::Point2d(rect.m10 / rect.m00 , rect.m01 / rect.m00);
-                    cv::circle(test_arm, rectmid, 3, cv::Scalar(255, 0, 0), 2, 8, 0);
+                    if (arm_rects.size() == 1) {
+                        drawRotatedRect(test_arm, arm_rect, cv::Scalar(0, 255, 0), 1);
+                        cv::putText(test_arm, std::to_string(arm_rect.size.area()), arm_rect.center, cv::FONT_HERSHEY_SIMPLEX, 0.5,
+                                    cv::Scalar(0, 255, 0), 2); // 满足所有的限制条件的轮廓--绿色--target
+                        // 计算矩
+                        rect = cv::moments(contour, false);
+                        // 计算中心矩
+                        rectmid = cv::Point2d(rect.m10 / rect.m00 , rect.m01 / rect.m00);
+                        cv::circle(test_arm, rectmid, 3, cv::Scalar(255, 0, 0), 2, 8, 0);
+                    }
                 }
             }
         }
@@ -303,16 +308,16 @@ cv::Mat Detector::find_Target(const cv::Mat &frame) {
     double multiple = 1.5; // 倍率，换算目标点所用
 
     // First quadrant
-    if (rectmid.x >= center.x && rectmid.y <= center.y)
+    if (rectmid.x >= center.x && rectmid.y >= center.y)
         target = cv::Point2d(center.x + (rectmid.x - center.x) * multiple, center.y - (center.y - rectmid.y) * multiple);
     // Second quadrant
-    if (rectmid.x <= center.x && rectmid.y <= center.y)
+    if (rectmid.x <= center.x && rectmid.y >= center.y)
 		target = cv::Point2d(center.x - (center.x - rectmid.x) * multiple, center.y - (center.y - rectmid.y) * multiple);
     // Third quadrant
-    if (rectmid.x <= center.x && rectmid.y >= center.y)
+    if (rectmid.x <= center.x && rectmid.y <= center.y)
         target = cv::Point2d(center.x - (center.x - rectmid.x) * multiple, center.y + (rectmid.y - center.y) * multiple);
     // Fourth Quadrant
-    if (rectmid.x >= center.x && rectmid.y >= center.y)
+    if (rectmid.x >= center.x && rectmid.y <= center.y)
         target = cv::Point2d(center.x + (rectmid.x - center.x) * multiple, center.y + (rectmid.y - center.y) * multiple);
 
     fmt::print(fmt::fg(fmt::color::blue) | fmt::emphasis::bold, "预测前的击打点({},{})\n", target.x, target.y);
@@ -348,6 +353,6 @@ cv::Mat Detector::find_Target(const cv::Mat &frame) {
                         0.5,cv::Scalar(0, 255, 0), 2);
     cv::imshow("result", result);
     return result;
-} */
+}
 
 
