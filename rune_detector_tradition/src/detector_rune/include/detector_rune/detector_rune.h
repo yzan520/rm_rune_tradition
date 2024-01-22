@@ -60,6 +60,13 @@ public:
 
     void translatoin2YawPitch(const Eigen::Vector3d& translation);
 
+    void sendAimInfo(const AutoAimInfo& aim_info) {
+        QByteArray data;
+        data.resize(sizeof(aim_info));
+        std::memcpy(data.data(), &aim_info, sizeof(aim_info));
+        m_serial.CrossThreadTransmitSignal(m_SendAutoAimInfoCode, m_PcId, data);
+    }
+
 private:
 #ifdef DEBUG
     // FIXME R标相关变量 -- 视频
@@ -73,8 +80,8 @@ private:
     float radius; // R外接圆半径
 #else
     // FIXME R标相关变量 -- 投影
-    int R_thresholdValue = 90; // R标二值化阈值
-    double max_R_area = 200; // R标最大面积
+    int R_thresholdValue = 70; // R标二值化阈值
+    double max_R_area = 250; // R标最大面积
     double min_R_area = 70; // R标最小面积
     float min_R_ratio = 0.5;
     float max_R_ratio = 1.6;
@@ -114,7 +121,7 @@ private:
 
 #ifdef DEBUG
     // FIXME 小臂相关变量 -- 视频
-    int arm_thresholdValue = 90;
+    int arm_thresholdValue = 110;
     float min_arm_area = 7400;
     float max_arm_area = 9500;
     float min_arm_ratio = 0.7;
@@ -125,11 +132,11 @@ private:
     cv::Point2f rectmid;
 #else
     // FIXME 小臂相关变量 -- 投影
-    int arm_thresholdValue = 0;
-    float min_arm_area;
-    float max_arm_area;
-    float min_arm_ratio;
-    float max_arm_ratio;
+    int arm_thresholdValue = 90;
+    float min_arm_area = 5000;
+    float max_arm_area = 6000;
+    float min_arm_ratio = 0.7;
+    float max_arm_ratio = 1.5;
     cv::Point2f vertex_arm[4];
     std::vector<cv::Point2f> key_points; // 小臂旋转矩形的四个顶点
     cv::Moments rect;
@@ -152,7 +159,11 @@ private:
     float yaw{};
     float pitch{};
 
+    armor_auto_aim::VCOMCOMM m_serial;
+    AutoAimInfo m_aim_info;
 
+    static constexpr uint16_t m_PcId = 0; // id:PC
+    static constexpr uint8_t m_SendAutoAimInfoCode = 1;
 };
 
 

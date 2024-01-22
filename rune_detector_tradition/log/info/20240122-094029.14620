@@ -1,0 +1,117 @@
+Log file created at: 2024/01/22 09:40:29
+Running on machine: zps-Dell-G15-5511
+Running duration (h:mm:ss): 0:00:00
+Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu threadid file:line] msg
+(HikDriver.cpp:163)[INFO][2024-00-22 09:40:29] Number of available Hik-devices: 1
+(HikDriver.cpp:140)[INFO][2024-00-22 09:40:31] Connect hik => [DriverInfo => name: MV-CS004-10UC; type: USB; ip: ;]
+(HikDriver.cpp:101)[INFO][2024-00-22 09:40:31] 
+=========================================
+Param Info: index: 0; [DriverInfo => name: MV-CS004-10UC; type: USB; ip: ;]
+    Trigger Mode: OFF
+    Trigger Source: Line0
+    Trigger Delay: 0
+    Auto Exposure Time: Off
+    Auto Gain: Off
+    Exposure Time:
+        current: 8000
+        min: 15
+        max: 9999817
+    Gain: 
+        current: 10.9854
+        min: 0
+        max: 23.9812
+=========================================
+(HikDriver.cpp:490)[INFO][2024-00-22 09:40:31] Hik frame stream starting...
+(main.cpp:87)[INFO][2024-00-22 09:40:32] main_thread: 0x7f3b6e44f000;
+(buff_auto_aim.cpp:18)[INFO][2024-00-22 09:40:32] buff_auto_aim_thread0x7f3b13fff000
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:32] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:39] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:39] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:39] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:39] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:40] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:40] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:40] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:40] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:40] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:40] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:40] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:40] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:40] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:40] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:40] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:40] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:40] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:40] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:40] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:40] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:40] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:40] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:40] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:40] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:40] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:40] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:40] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:40] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:40] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:41] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:41] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:41] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:41] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:41] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:41] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:41] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:41] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:41] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:41] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:42] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:42] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:42] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:42] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:42] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:42] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:42] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:42] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:42] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:43] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:43] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:43] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:43] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:44] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:44] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:44] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:44] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:45] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:45] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:45] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:48] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:48] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:48] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:49] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:49] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:50] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:50] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:51] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:51] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:52] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:52] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:52] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:56] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:57] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:57] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:57] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:57] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:58] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:59] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:59] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:59] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:59] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:59] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:59] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:59] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:59] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:59] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:59] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:59] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:40:59] not find VCOMCOMM Device
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:41:00] not find VCOMCOMM Device

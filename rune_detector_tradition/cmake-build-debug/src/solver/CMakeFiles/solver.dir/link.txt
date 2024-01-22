@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsolver.a CMakeFiles/solver.dir/src/coord_utils.cpp.o CMakeFiles/solver.dir/src/coordinate_solver.cpp.o CMakeFiles/solver.dir/src/pnpsolver.cpp.o CMakeFiles/solver.dir/src/solver.cpp.o
+/usr/bin/ranlib libsolver.a

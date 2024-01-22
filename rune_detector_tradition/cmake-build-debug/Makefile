@@ -234,6 +234,45 @@ buff_auto_aim_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f src/buff_auto_aim/CMakeFiles/buff_auto_aim_autogen.dir/build.make src/buff_auto_aim/CMakeFiles/buff_auto_aim_autogen.dir/build
 .PHONY : buff_auto_aim_autogen/fast
 
+#=============================================================================
+# Target rules for targets named solver
+
+# Build rule for target.
+solver: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 solver
+.PHONY : solver
+
+# fast build rule for target.
+solver/fast:
+	$(MAKE) $(MAKESILENT) -f src/solver/CMakeFiles/solver.dir/build.make src/solver/CMakeFiles/solver.dir/build
+.PHONY : solver/fast
+
+#=============================================================================
+# Target rules for targets named serial_port
+
+# Build rule for target.
+serial_port: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 serial_port
+.PHONY : serial_port
+
+# fast build rule for target.
+serial_port/fast:
+	$(MAKE) $(MAKESILENT) -f src/serial_port/CMakeFiles/serial_port.dir/build.make src/serial_port/CMakeFiles/serial_port.dir/build
+.PHONY : serial_port/fast
+
+#=============================================================================
+# Target rules for targets named serial_port_autogen
+
+# Build rule for target.
+serial_port_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 serial_port_autogen
+.PHONY : serial_port_autogen
+
+# fast build rule for target.
+serial_port_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f src/serial_port/CMakeFiles/serial_port_autogen.dir/build.make src/serial_port/CMakeFiles/serial_port_autogen.dir/build
+.PHONY : serial_port_autogen/fast
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -267,6 +306,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... buff_auto_aim_autogen"
+	@echo "... serial_port_autogen"
 	@echo "... vision_debug_widgets_autogen"
 	@echo "... buff_auto_aim"
 	@echo "... google_logger"
@@ -274,6 +314,8 @@ help:
 	@echo "... hik_ui"
 	@echo "... rm_rune_detection"
 	@echo "... rune_detector"
+	@echo "... serial_port"
+	@echo "... solver"
 	@echo "... vision_debug_widgets"
 	@echo "... src/main.o"
 	@echo "... src/main.i"

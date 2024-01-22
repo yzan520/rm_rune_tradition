@@ -193,6 +193,30 @@ src/buff_auto_aim.cpp.s:
 	cd /home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/buff_auto_aim/CMakeFiles/buff_auto_aim.dir/build.make src/buff_auto_aim/CMakeFiles/buff_auto_aim.dir/src/buff_auto_aim.cpp.s
 .PHONY : src/buff_auto_aim.cpp.s
 
+src/pnpsolver.o: src/pnpsolver.cpp.o
+.PHONY : src/pnpsolver.o
+
+# target to build an object file
+src/pnpsolver.cpp.o:
+	cd /home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/buff_auto_aim/CMakeFiles/buff_auto_aim.dir/build.make src/buff_auto_aim/CMakeFiles/buff_auto_aim.dir/src/pnpsolver.cpp.o
+.PHONY : src/pnpsolver.cpp.o
+
+src/pnpsolver.i: src/pnpsolver.cpp.i
+.PHONY : src/pnpsolver.i
+
+# target to preprocess a source file
+src/pnpsolver.cpp.i:
+	cd /home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/buff_auto_aim/CMakeFiles/buff_auto_aim.dir/build.make src/buff_auto_aim/CMakeFiles/buff_auto_aim.dir/src/pnpsolver.cpp.i
+.PHONY : src/pnpsolver.cpp.i
+
+src/pnpsolver.s: src/pnpsolver.cpp.s
+.PHONY : src/pnpsolver.s
+
+# target to generate assembly for a file
+src/pnpsolver.cpp.s:
+	cd /home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/buff_auto_aim/CMakeFiles/buff_auto_aim.dir/build.make src/buff_auto_aim/CMakeFiles/buff_auto_aim.dir/src/pnpsolver.cpp.s
+.PHONY : src/pnpsolver.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -209,6 +233,9 @@ help:
 	@echo "... src/buff_auto_aim.o"
 	@echo "... src/buff_auto_aim.i"
 	@echo "... src/buff_auto_aim.s"
+	@echo "... src/pnpsolver.o"
+	@echo "... src/pnpsolver.i"
+	@echo "... src/pnpsolver.s"
 .PHONY : help
 
 

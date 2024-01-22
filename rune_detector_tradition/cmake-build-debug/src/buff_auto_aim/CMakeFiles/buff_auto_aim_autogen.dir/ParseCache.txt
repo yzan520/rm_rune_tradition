@@ -8,6 +8,9 @@
  mdp:/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/HikDriver/include/HikDriver/HikDriver.h
  mdp:/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/HikDriver/include/HikDriver/HikUi.h
  mdp:/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/detector_rune/include/detector_rune/detector_rune.h
+ mdp:/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/serial_port/include/serial_port/CRC.h
+ mdp:/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/serial_port/include/serial_port/VCOMCOMM.h
+ mdp:/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/serial_port/include/serial_port/communicate_protocol.h
  mdp:/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/vision_debug_widgets/include/vision_debug_widgets/slider.h
  mdp:/opt/MVS/include/CameraParams.h
  mdp:/opt/MVS/include/MvCameraControl.h
@@ -509,13 +512,17 @@
  mdp:/usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h
  mdp:/usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h
  mdp:/usr/lib/gcc/x86_64-linux-gnu/11/include/xmmintrin.h
+ mdp:/usr/local/Qt/5.15.2/gcc_64/include/QtCore/QByteArray
+ mdp:/usr/local/Qt/5.15.2/gcc_64/include/QtCore/QMetaEnum
  mdp:/usr/local/Qt/5.15.2/gcc_64/include/QtCore/QString
  mdp:/usr/local/Qt/5.15.2/gcc_64/include/QtCore/QThread
+ mdp:/usr/local/Qt/5.15.2/gcc_64/include/QtCore/QTimer
  mdp:/usr/local/Qt/5.15.2/gcc_64/include/QtCore/qalgorithms.h
  mdp:/usr/local/Qt/5.15.2/gcc_64/include/QtCore/qarraydata.h
  mdp:/usr/local/Qt/5.15.2/gcc_64/include/QtCore/qatomic.h
  mdp:/usr/local/Qt/5.15.2/gcc_64/include/QtCore/qatomic_cxx11.h
  mdp:/usr/local/Qt/5.15.2/gcc_64/include/QtCore/qbasicatomic.h
+ mdp:/usr/local/Qt/5.15.2/gcc_64/include/QtCore/qbasictimer.h
  mdp:/usr/local/Qt/5.15.2/gcc_64/include/QtCore/qbytearray.h
  mdp:/usr/local/Qt/5.15.2/gcc_64/include/QtCore/qbytearraylist.h
  mdp:/usr/local/Qt/5.15.2/gcc_64/include/QtCore/qchar.h
@@ -542,6 +549,7 @@
  mdp:/usr/local/Qt/5.15.2/gcc_64/include/QtCore/qlogging.h
  mdp:/usr/local/Qt/5.15.2/gcc_64/include/QtCore/qmap.h
  mdp:/usr/local/Qt/5.15.2/gcc_64/include/QtCore/qmargins.h
+ mdp:/usr/local/Qt/5.15.2/gcc_64/include/QtCore/qmetaobject.h
  mdp:/usr/local/Qt/5.15.2/gcc_64/include/QtCore/qmetatype.h
  mdp:/usr/local/Qt/5.15.2/gcc_64/include/QtCore/qnamespace.h
  mdp:/usr/local/Qt/5.15.2/gcc_64/include/QtCore/qnumeric.h
@@ -573,6 +581,7 @@
  mdp:/usr/local/Qt/5.15.2/gcc_64/include/QtCore/qtcore-config.h
  mdp:/usr/local/Qt/5.15.2/gcc_64/include/QtCore/qtextstream.h
  mdp:/usr/local/Qt/5.15.2/gcc_64/include/QtCore/qthread.h
+ mdp:/usr/local/Qt/5.15.2/gcc_64/include/QtCore/qtimer.h
  mdp:/usr/local/Qt/5.15.2/gcc_64/include/QtCore/qtypeinfo.h
  mdp:/usr/local/Qt/5.15.2/gcc_64/include/QtCore/qvariant.h
  mdp:/usr/local/Qt/5.15.2/gcc_64/include/QtCore/qvarlengtharray.h
@@ -606,6 +615,9 @@
  mdp:/usr/local/Qt/5.15.2/gcc_64/include/QtGui/qtransform.h
  mdp:/usr/local/Qt/5.15.2/gcc_64/include/QtGui/qvalidator.h
  mdp:/usr/local/Qt/5.15.2/gcc_64/include/QtGui/qwindowdefs.h
+ mdp:/usr/local/Qt/5.15.2/gcc_64/include/QtSerialPort/QSerialPort
+ mdp:/usr/local/Qt/5.15.2/gcc_64/include/QtSerialPort/qserialport.h
+ mdp:/usr/local/Qt/5.15.2/gcc_64/include/QtSerialPort/qserialportglobal.h
  mdp:/usr/local/Qt/5.15.2/gcc_64/include/QtWidgets/QButtonGroup
  mdp:/usr/local/Qt/5.15.2/gcc_64/include/QtWidgets/QCheckBox
  mdp:/usr/local/Qt/5.15.2/gcc_64/include/QtWidgets/QHBoxLayout

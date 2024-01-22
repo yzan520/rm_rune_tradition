@@ -27,8 +27,8 @@ namespace buff_auto_aim {
             cv::imshow("src", m_frame);
             Detector rune;
             rune.find_R(m_frame);
-//            rune.find_Arm(m_frame);
-            rune.find_Leaf(m_frame);
+            rune.find_Arm(m_frame);
+//            rune.find_Leaf(m_frame);
 //            rune.find_Target(m_frame);
 //            cv::waitKey(0);
             if (cv::waitKey(30) == 'q') {
@@ -40,7 +40,7 @@ namespace buff_auto_aim {
     void BuffAutoAim::initHikCamera() {
         if (m_hik_driver->isConnected()) {
             m_hik_driver->setExposureTime(8000);
-            m_hik_driver->setGain(12);
+            m_hik_driver->setGain(11);
             m_hik_driver->showParamInfo();
             m_hik_driver->startReadThread();
 //            m_hik_ui = std::make_unique<HikUi>(*m_hik_driver);

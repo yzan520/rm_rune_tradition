@@ -5,7 +5,7 @@
 		<Option title="rm_rune_detection"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\src\;CMake Files\src\detector_rune\;CMake Files\src\HikDriver\;CMake Files\src\google_logger\;CMake Files\src\vision_debug_widgets\;CMake Files\src\buff_auto_aim\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\opencv4\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\glog\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\gflags\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\fmt\;CMake Files\..\..\..\..\..\usr\local\Qt\;CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\;CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\;CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\;CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\;CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5\;CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Core\;CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Widgets\;CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Gui\;CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5SerialPort\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\src\;CMake Files\src\detector_rune\;CMake Files\src\HikDriver\;CMake Files\src\google_logger\;CMake Files\src\vision_debug_widgets\;CMake Files\src\buff_auto_aim\;CMake Files\src\solver\;CMake Files\src\serial_port\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\opencv4\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\glog\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\gflags\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\fmt\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\yaml-cpp\;CMake Files\..\..\..\..\..\usr\local\Qt\;CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\;CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\;CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\;CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\;CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5\;CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Core\;CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Widgets\;CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Gui\;CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5SerialPort\;CMake Files\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\usr\lib\cmake\;CMake Files\..\..\..\..\..\usr\lib\cmake\eigen3\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug"/>
@@ -28,11 +28,14 @@
 					<Add option="-DQT_WIDGETS_LIB"/>
 					<Add option="-DQT_GUI_LIB"/>
 					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add option="-DYAML_CPP_STATIC_DEFINE"/>
 					<Add option="-DQT_SERIALPORT_LIB"/>
 					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/vision_debug_widgets/include"/>
 					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/buff_auto_aim/include"/>
 					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/detector_rune/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/solver/include"/>
 					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/google_logger/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/serial_port/include"/>
 					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/HikDriver/include"/>
 					<Add directory="/opt/MVS/include"/>
 					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include"/>
@@ -43,6 +46,7 @@
 					<Add directory="/usr/include"/>
 					<Add directory="/usr/local/include/opencv4"/>
 					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtSerialPort"/>
 					<Add directory="/usr/include/c++/11"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
@@ -68,11 +72,14 @@
 					<Add option="-DQT_WIDGETS_LIB"/>
 					<Add option="-DQT_GUI_LIB"/>
 					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add option="-DYAML_CPP_STATIC_DEFINE"/>
 					<Add option="-DQT_SERIALPORT_LIB"/>
 					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/vision_debug_widgets/include"/>
 					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/buff_auto_aim/include"/>
 					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/detector_rune/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/solver/include"/>
 					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/google_logger/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/serial_port/include"/>
 					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/HikDriver/include"/>
 					<Add directory="/opt/MVS/include"/>
 					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include"/>
@@ -83,6 +90,7 @@
 					<Add directory="/usr/include"/>
 					<Add directory="/usr/local/include/opencv4"/>
 					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtSerialPort"/>
 					<Add directory="/usr/include/c++/11"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
@@ -125,9 +133,20 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_SERIALPORT_LIB"/>
+					<Add option="-DYAML_CPP_STATIC_DEFINE"/>
 					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/detector_rune/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/solver/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/google_logger/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/serial_port/include"/>
 					<Add directory="/usr/local/include/opencv4"/>
 					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtCore"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/./mkspecs/linux-g++"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtSerialPort"/>
 					<Add directory="/usr/include/c++/11"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
 					<Add directory="/usr/include/c++/11/backward"/>
@@ -150,9 +169,20 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_SERIALPORT_LIB"/>
+					<Add option="-DYAML_CPP_STATIC_DEFINE"/>
 					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/detector_rune/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/solver/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/google_logger/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/serial_port/include"/>
 					<Add directory="/usr/local/include/opencv4"/>
 					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtCore"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/./mkspecs/linux-g++"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtSerialPort"/>
 					<Add directory="/usr/include/c++/11"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
 					<Add directory="/usr/include/c++/11/backward"/>
@@ -419,26 +449,30 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add option="-DYAML_CPP_STATIC_DEFINE"/>
 					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_SERIALPORT_LIB"/>
 					<Add option="-DQT_WIDGETS_LIB"/>
 					<Add option="-DQT_GUI_LIB"/>
-					<Add option="-DQT_SERIALPORT_LIB"/>
 					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/buff_auto_aim/buff_auto_aim_autogen/include"/>
 					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/buff_auto_aim/include"/>
 					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/detector_rune/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/solver/include"/>
 					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/google_logger/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/serial_port/include"/>
 					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/HikDriver/include"/>
 					<Add directory="/opt/MVS/include"/>
 					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/vision_debug_widgets/include"/>
 					<Add directory="/usr/local/include/opencv4"/>
 					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include"/>
 					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtCore"/>
 					<Add directory="/usr/local/Qt/5.15.2/gcc_64/./mkspecs/linux-g++"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtSerialPort"/>
 					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtWidgets"/>
 					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtGui"/>
 					<Add directory="/usr/include"/>
-					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtSerialPort"/>
 					<Add directory="/usr/include/c++/11"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
 					<Add directory="/usr/include/c++/11/backward"/>
@@ -460,26 +494,30 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add option="-DYAML_CPP_STATIC_DEFINE"/>
 					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_SERIALPORT_LIB"/>
 					<Add option="-DQT_WIDGETS_LIB"/>
 					<Add option="-DQT_GUI_LIB"/>
-					<Add option="-DQT_SERIALPORT_LIB"/>
 					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/buff_auto_aim/buff_auto_aim_autogen/include"/>
 					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/buff_auto_aim/include"/>
 					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/detector_rune/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/solver/include"/>
 					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/google_logger/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/serial_port/include"/>
 					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/HikDriver/include"/>
 					<Add directory="/opt/MVS/include"/>
 					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/vision_debug_widgets/include"/>
 					<Add directory="/usr/local/include/opencv4"/>
 					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include"/>
 					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtCore"/>
 					<Add directory="/usr/local/Qt/5.15.2/gcc_64/./mkspecs/linux-g++"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtSerialPort"/>
 					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtWidgets"/>
 					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtGui"/>
 					<Add directory="/usr/include"/>
-					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtSerialPort"/>
 					<Add directory="/usr/include/c++/11"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
 					<Add directory="/usr/include/c++/11/backward"/>
@@ -503,9 +541,156 @@
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/buff_auto_aim/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="solver">
+				<Option output="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/solver/libsolver.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/solver"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add option="-DYAML_CPP_STATIC_DEFINE"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_SERIALPORT_LIB"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/solver/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/google_logger/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/detector_rune/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/serial_port/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv4"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtCore"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/./mkspecs/linux-g++"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtSerialPort"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/solver/Makefile&quot;  VERBOSE=1 solver"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/solver/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/solver/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/solver/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="solver/fast">
+				<Option output="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/solver/libsolver.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/solver"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add option="-DYAML_CPP_STATIC_DEFINE"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_SERIALPORT_LIB"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/solver/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/google_logger/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/detector_rune/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/serial_port/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv4"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtCore"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/./mkspecs/linux-g++"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtSerialPort"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/solver/Makefile&quot;  VERBOSE=1 solver/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/solver/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/solver/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/solver/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="serial_port">
+				<Option output="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/serial_port/libserial_port.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/serial_port"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_SERIALPORT_LIB"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/serial_port/serial_port_autogen/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/serial_port/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtCore"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/./mkspecs/linux-g++"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtSerialPort"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/serial_port/Makefile&quot;  VERBOSE=1 serial_port"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/serial_port/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/serial_port/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/serial_port/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="serial_port/fast">
+				<Option output="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/serial_port/libserial_port.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/serial_port"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_SERIALPORT_LIB"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/serial_port/serial_port_autogen/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/serial_port/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtCore"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/./mkspecs/linux-g++"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtSerialPort"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/serial_port/Makefile&quot;  VERBOSE=1 serial_port/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/serial_port/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/serial_port/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/serial_port/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="serial_port_autogen">
+				<Option working_dir="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/serial_port"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/serial_port/Makefile&quot;  VERBOSE=1 serial_port_autogen"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/serial_port/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/serial_port/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/serial_port/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 		</Build>
 		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/buff_auto_aim/buff_auto_aim_autogen/mocs_compilation.cpp">
 			<Option target="buff_auto_aim"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/serial_port/serial_port_autogen/mocs_compilation.cpp">
+			<Option target="serial_port"/>
 		</Unit>
 		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/vision_debug_widgets/vision_debug_widgets_autogen/mocs_compilation.cpp">
 			<Option target="vision_debug_widgets"/>
@@ -522,7 +707,13 @@
 		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/buff_auto_aim/include/buff_auto_aim/buff_auto_aim.h">
 			<Option target="buff_auto_aim"/>
 		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/buff_auto_aim/include/buff_auto_aim/pnpsolver.h">
+			<Option target="buff_auto_aim"/>
+		</Unit>
 		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/buff_auto_aim/src/buff_auto_aim.cpp">
+			<Option target="buff_auto_aim"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/buff_auto_aim/src/pnpsolver.cpp">
 			<Option target="buff_auto_aim"/>
 		</Unit>
 		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/detector_rune/include/detector_rune/detector_rune.h">
@@ -539,6 +730,48 @@
 		</Unit>
 		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/main.cpp">
 			<Option target="rm_rune_detection"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/serial_port/include/serial_port/CRC.h">
+			<Option target="serial_port"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/serial_port/include/serial_port/VCOMCOMM.h">
+			<Option target="serial_port"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/serial_port/include/serial_port/communicate_protocol.h">
+			<Option target="serial_port"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/serial_port/src/CRC.cpp">
+			<Option target="serial_port"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/serial_port/src/VCOMCOMM.cpp">
+			<Option target="serial_port"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/solver/include/solver/coord_utils.h">
+			<Option target="solver"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/solver/include/solver/coordinate_solver.h">
+			<Option target="solver"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/solver/include/solver/pnpsolver.h">
+			<Option target="solver"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/solver/include/solver/solver.h">
+			<Option target="solver"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/solver/include/solver/solver_interface.h">
+			<Option target="solver"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/solver/src/coord_utils.cpp">
+			<Option target="solver"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/solver/src/coordinate_solver.cpp">
+			<Option target="solver"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/solver/src/pnpsolver.cpp">
+			<Option target="solver"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/solver/src/solver.cpp">
+			<Option target="solver"/>
 		</Unit>
 		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/vision_debug_widgets/include/vision_debug_widgets/hsv_edit.h">
 			<Option target="vision_debug_widgets"/>
@@ -566,6 +799,12 @@
 		</Unit>
 		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/buff_auto_aim/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\src\buff_auto_aim\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/solver/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\solver\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/serial_port/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\serial_port\"/>
 		</Unit>
 		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/lib/cmake/opencv4/OpenCVConfig-version.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
@@ -617,6 +856,18 @@
 		</Unit>
 		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/lib/cmake/fmt/fmt-targets.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\fmt\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/lib/cmake/yaml-cpp/yaml-cpp-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\yaml-cpp\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/lib/cmake/yaml-cpp/yaml-cpp-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\yaml-cpp\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/lib/cmake/yaml-cpp/yaml-cpp-targets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\yaml-cpp\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/lib/cmake/yaml-cpp/yaml-cpp-targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\yaml-cpp\"/>
 		</Unit>
 		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5/Qt5Config.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5\"/>
@@ -779,6 +1030,15 @@
 		</Unit>
 		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5SerialPort/Qt5SerialPortConfigVersion.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5SerialPort\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/lib/cmake/eigen3/Eigen3Config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\cmake\eigen3\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/lib/cmake/eigen3/Eigen3ConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\cmake\eigen3\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/lib/cmake/eigen3/Eigen3Targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\cmake\eigen3\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

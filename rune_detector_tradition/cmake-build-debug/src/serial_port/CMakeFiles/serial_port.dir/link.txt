@@ -1,0 +1,2 @@
+/usr/bin/ar qc libserial_port.a CMakeFiles/serial_port.dir/serial_port_autogen/mocs_compilation.cpp.o CMakeFiles/serial_port.dir/src/CRC.cpp.o CMakeFiles/serial_port.dir/src/VCOMCOMM.cpp.o
+/usr/bin/ranlib libserial_port.a

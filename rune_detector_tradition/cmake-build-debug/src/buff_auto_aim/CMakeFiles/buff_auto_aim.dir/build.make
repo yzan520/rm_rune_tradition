@@ -97,19 +97,35 @@ src/buff_auto_aim/CMakeFiles/buff_auto_aim.dir/src/buff_auto_aim.cpp.s: cmake_fo
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/buff_auto_aim.dir/src/buff_auto_aim.cpp.s"
 	cd /home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/buff_auto_aim && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/buff_auto_aim/src/buff_auto_aim.cpp -o CMakeFiles/buff_auto_aim.dir/src/buff_auto_aim.cpp.s
 
+src/buff_auto_aim/CMakeFiles/buff_auto_aim.dir/src/pnpsolver.cpp.o: src/buff_auto_aim/CMakeFiles/buff_auto_aim.dir/flags.make
+src/buff_auto_aim/CMakeFiles/buff_auto_aim.dir/src/pnpsolver.cpp.o: /home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/buff_auto_aim/src/pnpsolver.cpp
+src/buff_auto_aim/CMakeFiles/buff_auto_aim.dir/src/pnpsolver.cpp.o: src/buff_auto_aim/CMakeFiles/buff_auto_aim.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/buff_auto_aim/CMakeFiles/buff_auto_aim.dir/src/pnpsolver.cpp.o"
+	cd /home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/buff_auto_aim && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/buff_auto_aim/CMakeFiles/buff_auto_aim.dir/src/pnpsolver.cpp.o -MF CMakeFiles/buff_auto_aim.dir/src/pnpsolver.cpp.o.d -o CMakeFiles/buff_auto_aim.dir/src/pnpsolver.cpp.o -c /home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/buff_auto_aim/src/pnpsolver.cpp
+
+src/buff_auto_aim/CMakeFiles/buff_auto_aim.dir/src/pnpsolver.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/buff_auto_aim.dir/src/pnpsolver.cpp.i"
+	cd /home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/buff_auto_aim && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/buff_auto_aim/src/pnpsolver.cpp > CMakeFiles/buff_auto_aim.dir/src/pnpsolver.cpp.i
+
+src/buff_auto_aim/CMakeFiles/buff_auto_aim.dir/src/pnpsolver.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/buff_auto_aim.dir/src/pnpsolver.cpp.s"
+	cd /home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/buff_auto_aim && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/buff_auto_aim/src/pnpsolver.cpp -o CMakeFiles/buff_auto_aim.dir/src/pnpsolver.cpp.s
+
 # Object files for target buff_auto_aim
 buff_auto_aim_OBJECTS = \
 "CMakeFiles/buff_auto_aim.dir/buff_auto_aim_autogen/mocs_compilation.cpp.o" \
-"CMakeFiles/buff_auto_aim.dir/src/buff_auto_aim.cpp.o"
+"CMakeFiles/buff_auto_aim.dir/src/buff_auto_aim.cpp.o" \
+"CMakeFiles/buff_auto_aim.dir/src/pnpsolver.cpp.o"
 
 # External object files for target buff_auto_aim
 buff_auto_aim_EXTERNAL_OBJECTS =
 
 src/buff_auto_aim/libbuff_auto_aim.a: src/buff_auto_aim/CMakeFiles/buff_auto_aim.dir/buff_auto_aim_autogen/mocs_compilation.cpp.o
 src/buff_auto_aim/libbuff_auto_aim.a: src/buff_auto_aim/CMakeFiles/buff_auto_aim.dir/src/buff_auto_aim.cpp.o
+src/buff_auto_aim/libbuff_auto_aim.a: src/buff_auto_aim/CMakeFiles/buff_auto_aim.dir/src/pnpsolver.cpp.o
 src/buff_auto_aim/libbuff_auto_aim.a: src/buff_auto_aim/CMakeFiles/buff_auto_aim.dir/build.make
 src/buff_auto_aim/libbuff_auto_aim.a: src/buff_auto_aim/CMakeFiles/buff_auto_aim.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libbuff_auto_aim.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libbuff_auto_aim.a"
 	cd /home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/buff_auto_aim && $(CMAKE_COMMAND) -P CMakeFiles/buff_auto_aim.dir/cmake_clean_target.cmake
 	cd /home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/buff_auto_aim && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/buff_auto_aim.dir/link.txt --verbose=$(VERBOSE)
 

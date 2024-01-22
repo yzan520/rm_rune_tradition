@@ -1,0 +1,5 @@
+Log file created at: 2024/01/22 09:31:06
+Running on machine: zps-Dell-G15-5511
+Running duration (h:mm:ss): 0:00:04
+Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu threadid file:line] msg
+(VCOMCOMM.cpp:33)[WARNING][2024-00-22 09:31:06] not find VCOMCOMM Device

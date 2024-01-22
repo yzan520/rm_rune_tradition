@@ -5,7 +5,7 @@
 		<Option title="rune_detector"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\src\;CMake Files\src\detector_rune\;CMake Files\src\HikDriver\;CMake Files\src\google_logger\;CMake Files\src\vision_debug_widgets\;CMake Files\src\buff_auto_aim\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\opencv4\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\glog\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\gflags\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\fmt\;CMake Files\..\..\..\..\..\usr\local\Qt\;CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\;CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\;CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\;CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\;CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5\;CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Core\;CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Widgets\;CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Gui\;CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5SerialPort\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\src\;CMake Files\src\detector_rune\;CMake Files\src\HikDriver\;CMake Files\src\google_logger\;CMake Files\src\vision_debug_widgets\;CMake Files\src\buff_auto_aim\;CMake Files\src\solver\;CMake Files\src\serial_port\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\opencv4\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\glog\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\gflags\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\fmt\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\yaml-cpp\;CMake Files\..\..\..\..\..\usr\local\Qt\;CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\;CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\;CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\;CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\;CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5\;CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Core\;CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Widgets\;CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5Gui\;CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5SerialPort\;CMake Files\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\usr\lib\cmake\;CMake Files\..\..\..\..\..\usr\lib\cmake\eigen3\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/src/detector_rune"/>
@@ -25,9 +25,20 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_SERIALPORT_LIB"/>
+					<Add option="-DYAML_CPP_STATIC_DEFINE"/>
 					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/detector_rune/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/solver/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/google_logger/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/serial_port/include"/>
 					<Add directory="/usr/local/include/opencv4"/>
 					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtCore"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/./mkspecs/linux-g++"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtSerialPort"/>
 					<Add directory="/usr/include/c++/11"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
 					<Add directory="/usr/include/c++/11/backward"/>
@@ -50,9 +61,20 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_SERIALPORT_LIB"/>
+					<Add option="-DYAML_CPP_STATIC_DEFINE"/>
 					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/detector_rune/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/solver/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/google_logger/include"/>
+					<Add directory="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/serial_port/include"/>
 					<Add directory="/usr/local/include/opencv4"/>
 					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtCore"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/./mkspecs/linux-g++"/>
+					<Add directory="/usr/local/Qt/5.15.2/gcc_64/include/QtSerialPort"/>
 					<Add directory="/usr/include/c++/11"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
 					<Add directory="/usr/include/c++/11/backward"/>
@@ -91,6 +113,12 @@
 		</Unit>
 		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/buff_auto_aim/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\src\buff_auto_aim\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/solver/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\solver\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/src/serial_port/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\serial_port\"/>
 		</Unit>
 		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/lib/cmake/opencv4/OpenCVConfig-version.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
@@ -142,6 +170,18 @@
 		</Unit>
 		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/lib/cmake/fmt/fmt-targets.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\fmt\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/lib/cmake/yaml-cpp/yaml-cpp-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\yaml-cpp\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/lib/cmake/yaml-cpp/yaml-cpp-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\yaml-cpp\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/lib/cmake/yaml-cpp/yaml-cpp-targets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\yaml-cpp\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/lib/cmake/yaml-cpp/yaml-cpp-targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\yaml-cpp\"/>
 		</Unit>
 		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5/Qt5Config.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5\"/>
@@ -304,6 +344,15 @@
 		</Unit>
 		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/local/Qt/5.15.2/gcc_64/lib/cmake/Qt5SerialPort/Qt5SerialPortConfigVersion.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Qt\5.15.2\gcc_64\lib\cmake\Qt5SerialPort\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/lib/cmake/eigen3/Eigen3Config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\cmake\eigen3\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/lib/cmake/eigen3/Eigen3ConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\cmake\eigen3\"/>
+		</Unit>
+		<Unit filename="/home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/../../../../../usr/lib/cmake/eigen3/Eigen3Targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\cmake\eigen3\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

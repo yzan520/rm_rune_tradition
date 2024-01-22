@@ -1,11 +1,11 @@
 Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
-Change Dir: /home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-zf2nom
+Change Dir: /home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-7Sm8SI
 
-Run Build Command(s):/opt/clion-2023.1.3/bin/ninja/linux/x64/ninja cmTC_d4432 && [1/2] Building CXX object CMakeFiles/cmTC_d4432.dir/src.cxx.o
-[2/2] Linking CXX executable cmTC_d4432
-FAILED: cmTC_d4432 
-: && /usr/bin/c++   CMakeFiles/cmTC_d4432.dir/src.cxx.o -o cmTC_d4432   && :
-/usr/bin/ld: CMakeFiles/cmTC_d4432.dir/src.cxx.o: in function `main':
+Run Build Command(s):/opt/clion-2023.1.3/bin/ninja/linux/x64/ninja cmTC_f8270 && [1/2] Building CXX object CMakeFiles/cmTC_f8270.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_f8270
+FAILED: cmTC_f8270 
+: && /usr/bin/c++   CMakeFiles/cmTC_f8270.dir/src.cxx.o -o cmTC_f8270   && :
+/usr/bin/ld: CMakeFiles/cmTC_f8270.dir/src.cxx.o: in function `main':
 src.cxx:(.text+0x46): undefined reference to `pthread_create'
 /usr/bin/ld: src.cxx:(.text+0x52): undefined reference to `pthread_detach'
 /usr/bin/ld: src.cxx:(.text+0x5e): undefined reference to `pthread_cancel'
@@ -37,12 +37,12 @@ int main(void)
 
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-vRerim
+Change Dir: /home/zps/rm_power/rm_rune_tradition/rune_detector_tradition/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-fkqGuL
 
-Run Build Command(s):/opt/clion-2023.1.3/bin/ninja/linux/x64/ninja cmTC_cc6fa && [1/2] Building CXX object CMakeFiles/cmTC_cc6fa.dir/CheckFunctionExists.cxx.o
-[2/2] Linking CXX executable cmTC_cc6fa
-FAILED: cmTC_cc6fa 
-: && /usr/bin/c++ -DCHECK_FUNCTION_EXISTS=pthread_create  CMakeFiles/cmTC_cc6fa.dir/CheckFunctionExists.cxx.o -o cmTC_cc6fa  -lpthreads && :
+Run Build Command(s):/opt/clion-2023.1.3/bin/ninja/linux/x64/ninja cmTC_98422 && [1/2] Building CXX object CMakeFiles/cmTC_98422.dir/CheckFunctionExists.cxx.o
+[2/2] Linking CXX executable cmTC_98422
+FAILED: cmTC_98422 
+: && /usr/bin/c++ -DCHECK_FUNCTION_EXISTS=pthread_create  CMakeFiles/cmTC_98422.dir/CheckFunctionExists.cxx.o -o cmTC_98422  -lpthreads && :
 /usr/bin/ld: 找不到 -lpthreads
 collect2: error: ld returned 1 exit status
 ninja: build stopped: subcommand failed.
